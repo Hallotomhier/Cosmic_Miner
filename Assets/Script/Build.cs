@@ -9,7 +9,7 @@ public class Build : MonoBehaviour
     public Money money_script;
     public float money;
     public float price;
-
+    
     public void Update()
     {
         money = money_script.cash;
