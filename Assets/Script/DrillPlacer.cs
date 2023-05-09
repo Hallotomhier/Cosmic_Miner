@@ -13,7 +13,7 @@ public class DrillPlacer : MonoBehaviour
 
     void Start()
     {
-        
+        Debug.Log("start");
     }
 
     
