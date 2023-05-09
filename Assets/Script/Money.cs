@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Money : MonoBehaviour
 {
-    public int cash;
+    public float cash;
 
 
 

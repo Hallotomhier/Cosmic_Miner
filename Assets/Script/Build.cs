@@ -7,8 +7,8 @@ public class Build : MonoBehaviour
     public Transform build_Pos;
     public GameObject build;
     public Money money_script;
-    public int money;
-    public int price;
+    public float money;
+    public float price;
 
     public void Update()
     {
