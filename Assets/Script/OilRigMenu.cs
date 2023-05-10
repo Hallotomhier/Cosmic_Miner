@@ -5,25 +5,27 @@ using UnityEngine;
 public class OilRigMenu : MonoBehaviour
 {
     public GameObject oil_rig_panel;
-    void Start()
+    public Transform player;
+    void Update()
     {
-        
+        if(!Input.GetKey(KeyCode.F))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            oil_rig_panel.SetActive(false);
+
+
+        }
     }
 
     
-    void Update()
+    void OnTriggerStay(Collider player)
     {
         if (Input.GetKey(KeyCode.F))
         {
+            Cursor.lockState = CursorLockMode.None;
             oil_rig_panel.SetActive(true);
-            GetComponent<Movement>().enabled = false;
-            GetComponent<MouseMovement>().enabled = false;
+ 
         }
-        else 
-        {
-            oil_rig_panel.SetActive(false);
-            GetComponent<Movement>().enabled = true;
-            GetComponent<MouseMovement>().enabled = true;
-        }
+        
     }
 }

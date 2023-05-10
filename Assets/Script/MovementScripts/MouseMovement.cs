@@ -11,14 +11,14 @@ public class  MouseMovement: MonoBehaviour
 
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     
     void Update()
     {
-        mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * mousSens;
-        mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * mousSens;
+        mouseX = Input.GetAxis("Mouse X")  * mousSens;
+        mouseY = Input.GetAxis("Mouse Y")  * mousSens;
 
         dir = new Vector3(0, mouseX, 0);
         playerBody.transform.Rotate(dir * mousSens * Time.deltaTime);
@@ -26,7 +26,7 @@ public class  MouseMovement: MonoBehaviour
         dir = new Vector3(-mouseY, 0, 0);
         transform.Rotate(dir * mousSens * Time.deltaTime);
 
-        rotY += mouseY;
+        rotY += mouseY * mousSens * Time.deltaTime;
         rotY = Mathf.Clamp(rotY, -90, 90);
         clampY = transform.eulerAngles;
         clampY.x = -rotY;
