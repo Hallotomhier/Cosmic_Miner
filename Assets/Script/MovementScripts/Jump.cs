@@ -14,7 +14,7 @@ public class Jump : MonoBehaviour
     void Update()
     {
         rb = GetComponent<Rigidbody>();
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f))
         {
             grounded = true;
         }

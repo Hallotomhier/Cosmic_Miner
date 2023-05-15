@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - IronMine
+  - Iron
+  - IronMineActive
   layers:
   - Default
   - TransparentFX

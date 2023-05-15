@@ -17,5 +17,6 @@ public class AirSystem : MonoBehaviour
     public void OnTriggerExit(Collider player)
     {
         inside_Air = false;
+        
     }
 }

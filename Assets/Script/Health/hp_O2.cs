@@ -26,7 +26,7 @@ public class hp_O2 : MonoBehaviour
 
     public void O2() 
     {
-        if(insideair == false) 
+        if(insideair == false && oxygen > 0) 
         {
             oxygen -= 0.5f * Time.deltaTime;
             
@@ -37,13 +37,15 @@ public class hp_O2 : MonoBehaviour
 
     public void Hp() 
     {
-        if(oxygen == 0)  
+        if(oxygen <= 0)  
         {
+            oxygen = 0;
             health -= 2f * Time.deltaTime;
             
         } 
-        if(health== 0) 
+        if(health <= 0) 
         {
+            health = 0;
             Debug.Log("die");
             //transform.position = respawn_pos;
         }
