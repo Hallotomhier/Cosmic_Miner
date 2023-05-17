@@ -16,7 +16,7 @@ public class hp_O2 : MonoBehaviour
     
     void Update()
     {
-        insideair = airsystem.inside_Air;
+        //insideair = airsystem.inside_Air;
         Hp();
         O2();
         oxygen_slider.value = oxygen;

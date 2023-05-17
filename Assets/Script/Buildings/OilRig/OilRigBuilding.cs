@@ -12,7 +12,7 @@ public class OilRigBuilding : MonoBehaviour
     public bool[] build;
     public GameObject[] oil_button;
     public bool upgrade;
-    public float iron, gold, diamond, oil;
+   
 
 
 
@@ -26,10 +26,6 @@ public class OilRigBuilding : MonoBehaviour
     void Update()
     {
         money = money_script.cash;
-        iron = money_script.iron;
-        gold = money_script.gold;
-        diamond = money_script.diamond;
-        oil = money_script.oil;
     }
 
 
