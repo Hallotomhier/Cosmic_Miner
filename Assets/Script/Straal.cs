@@ -33,12 +33,18 @@ public class Straal : MonoBehaviour
             cast_Hit = hit.transform.gameObject;
             if (cast_Hit.CompareTag("Iron")) 
             {
-                if (GetComponent<DrillTotal>().iron_drill >= 0) 
-                {
-                    cast_Hit.transform.GetChild(0).gameObject.SetActive(true);
-                    GetComponent<DrillTotal>().iron_drill -= 1;
-                    cast_Hit.tag = "IronMineActive";
+
+                if (Input.GetKeyDown(KeyCode.E)) 
+                { 
+                    
+                    
+                        cast_Hit.transform.GetChild(0).gameObject.SetActive(true);
+                        //GetComponent<DrillTotal>().iron_drill -= 1;
+                        cast_Hit.tag = "IronMineActive";
+                    
+                
                 }
+                
                 
 
 
