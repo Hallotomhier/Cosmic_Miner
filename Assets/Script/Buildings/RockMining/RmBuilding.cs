@@ -32,6 +32,7 @@ public class RmBuilding : MonoBehaviour
                 build[0] = true;
                 rm_button[0].SetActive(false);
                 rm_button[1].SetActive(true);
+                
             }
         }
     }

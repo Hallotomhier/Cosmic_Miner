@@ -47,7 +47,7 @@ public class hp_O2 : MonoBehaviour
         {
             health = 0;
             Debug.Log("die");
-            //transform.position = respawn_pos;
+            
         }
     
     }
