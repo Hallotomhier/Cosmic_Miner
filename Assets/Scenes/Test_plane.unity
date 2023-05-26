@@ -4231,7 +4231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944409436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.8, y: 2.27, z: 59.36}
+  m_LocalPosition: {x: 32, y: 2.27, z: 71.8}
   m_LocalScale: {x: 1, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4832,6 +4832,9 @@ MonoBehaviour:
   - {fileID: 726318120}
   - {fileID: 476872207}
   money_script: {fileID: 944409446}
+  is_build1: 0
+  is_build2: 0
+  is_build3: 0
 --- !u!65 &1000078558
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5689,6 +5692,9 @@ MonoBehaviour:
   - {fileID: 139419773}
   - {fileID: 1752395272}
   money_script: {fileID: 944409446}
+  is_build1: 0
+  is_build2: 0
+  is_build3: 0
 --- !u!1 &1205805033
 GameObject:
   m_ObjectHideFlags: 0
@@ -6316,6 +6322,9 @@ MonoBehaviour:
   - {fileID: 48776136}
   - {fileID: 963730117}
   money_script: {fileID: 944409446}
+  is_build1: 0
+  is_build2: 0
+  is_build3: 0
 --- !u!65 &1397110398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6839,6 +6848,9 @@ MonoBehaviour:
   - {fileID: 49598496}
   - {fileID: 1162668986}
   money_script: {fileID: 944409446}
+  is_build1: 0
+  is_build2: 0
+  is_build3: 0
 --- !u!65 &1558761866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7767,6 +7779,9 @@ MonoBehaviour:
   - {fileID: 34484378}
   - {fileID: 463528684}
   upgrade: 0
+  is_build1: 0
+  is_build2: 0
+  is_build3: 0
 --- !u!65 &1760797200
 BoxCollider:
   m_ObjectHideFlags: 0

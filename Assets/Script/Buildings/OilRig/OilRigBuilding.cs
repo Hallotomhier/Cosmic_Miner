@@ -12,7 +12,12 @@ public class OilRigBuilding : MonoBehaviour
     public bool[] build;
     public GameObject[] oil_button;
     public bool upgrade;
-   
+
+
+
+    public bool is_build1;
+    public bool is_build2;
+    public bool is_build3;
 
 
 
@@ -20,12 +25,13 @@ public class OilRigBuilding : MonoBehaviour
 
 
 
-    
 
-    
+
+
     void Update()
     {
         money = money_script.cash;
+        Save();
     }
 
 
@@ -37,11 +43,10 @@ public class OilRigBuilding : MonoBehaviour
         {
             if(build[0] == false)
             {
-                oil_building[0].SetActive(true);
+                
                 money_script.cash -= price[0];
-                build[0] = true;
-                oil_button[0].SetActive(false);
-                oil_button[1].SetActive(true);
+                is_build1 = true;
+                
 
             }
         }
@@ -55,12 +60,10 @@ public class OilRigBuilding : MonoBehaviour
             if(build[0] == true && build[1] == false)
             {
 
-                oil_building[1].SetActive(true);
-                oil_building[0].SetActive(false);
+                
                 money_script.cash -= price[1];
-                build[1] = true;
-                oil_button[1].SetActive(false);
-                oil_button[2].SetActive(true);
+                is_build2 = true;
+                
             }
         }
 
@@ -73,14 +76,55 @@ public class OilRigBuilding : MonoBehaviour
             if(build[0] == true && build[1] == true && build[2] == false)
             {
                 
-                oil_building[2].SetActive(true);
-                oil_building[1].SetActive(false);
+               
                 money_script.cash -= price[2];
-                build[2] = true;
-                upgrade = true;
-                oil_button[2].SetActive(false);
+                is_build3 = true;
             }
         }
 
     }
+
+
+    public void Save() 
+    {
+
+        if (is_build1 == true) 
+        {
+            oil_building[0].SetActive(true);
+            build[0] = true;
+            oil_button[0].SetActive(false);
+            oil_button[1].SetActive(true);
+        }
+
+        if (is_build2 == true)
+        {
+            oil_building[1].SetActive(true);
+            oil_building[0].SetActive(false);
+            build[1] = true;
+            oil_button[0].SetActive(false);
+            oil_button[1].SetActive(false);
+            oil_button[2].SetActive(true);
+            is_build1 = false;
+
+        }
+
+        if (is_build3 == true)
+        {
+            oil_building[2].SetActive(true);
+            oil_building[1].SetActive(false);
+            build[2] = true;
+            upgrade = true;
+            oil_button[0].SetActive(false);
+            oil_button[1].SetActive(false);
+            oil_button[2].SetActive(false);
+            is_build2 = false;
+
+        }
+
+    }
+
+
+
+
+ 
 }
