@@ -20,7 +20,7 @@ public class RmBuilding : MonoBehaviour
     public bool is_build3;
 
 
-    void Update()
+    public void Update()
     {
         money = money_script.cash;
         Save();
