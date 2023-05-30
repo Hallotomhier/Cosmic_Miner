@@ -18,7 +18,7 @@ public class Straal : MonoBehaviour
     {
        
         OxygenFill();
-        PlaceDrill();
+        //PlaceDrill();
 
 
 
@@ -26,7 +26,7 @@ public class Straal : MonoBehaviour
 
 
 
-    void PlaceDrill() 
+    /*void PlaceDrill() 
     {
         if (Physics.Raycast(transform.position, transform.forward, out hit, 5)) 
         {
@@ -59,7 +59,7 @@ public class Straal : MonoBehaviour
     
     
     
-    }
+    }*/
 
 
 
