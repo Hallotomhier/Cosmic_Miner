@@ -41,6 +41,7 @@ public class SaveLoadData
         rm_1 = data.rm_1;
         rm_2 = data.rm_2;
         rm_3 = data.rm_3;
+        Debug.Log("" + data.rm_1);
 
         arm_1 = data.arm_1;
         arm_2 = data.arm_2;

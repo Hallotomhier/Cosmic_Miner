@@ -17,7 +17,7 @@ public class SaveLoad : MonoBehaviour
         Debug.Log("Game opgeslagen in " + path);
     }
 
-    public static SaveLoadData loadData() 
+    public static SaveLoadData LoadData() 
     {
         string path = Application.persistentDataPath + "/save.powerpoint";
         if (File.Exists(path))
