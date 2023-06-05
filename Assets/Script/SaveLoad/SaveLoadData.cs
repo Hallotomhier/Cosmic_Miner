@@ -35,9 +35,30 @@ public class SaveLoadData
     public float _pos2;
     public float _pos3;
 
+    public float money;
+    public float health;
+    public float oxygen;
+
+    public int iron_drill;
+    public int gold_drill;
+    public int diamond_drill;
+    public int oil_extractor;
+
 
     public SaveLoadData(Data data) 
     {
+        iron_drill = data.iron_drill;
+        gold_drill = data.gold_drill;
+        diamond_drill = data.gold_drill;
+        oil_extractor = data.oil_extractor;
+
+
+        money = data.money;
+        health = data.health;
+        oxygen = data.oxygen;
+
+
+
         rm_1 = data.rm_1;
         rm_2 = data.rm_2;
         rm_3 = data.rm_3;

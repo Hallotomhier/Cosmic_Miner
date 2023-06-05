@@ -9,6 +9,8 @@ public class RmBuilding : MonoBehaviour
 
     public bool[] build;
     public bool upgrade;
+    public bool upgrade2;
+    public bool upgrade3;
 
     public GameObject[] rm_building;
     public GameObject[] rm_button;
@@ -88,6 +90,8 @@ public class RmBuilding : MonoBehaviour
             rm_button[1].SetActive(false);
             rm_button[2].SetActive(true);
             is_build1 = false;
+            upgrade2 = true;
+            upgrade = true;
 
         }
 
@@ -100,7 +104,10 @@ public class RmBuilding : MonoBehaviour
             rm_button[1].SetActive(false);
             rm_button[2].SetActive(false);
             is_build2 = false;
-            
+            upgrade3 = true;
+            upgrade2 = true;
+            upgrade  = true;
+
         }
     }
 

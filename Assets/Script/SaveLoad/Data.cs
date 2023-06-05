@@ -40,7 +40,23 @@ public class Data : MonoBehaviour
     public O2building o2_building;
     public OilRigBuilding oil_building;
     public Hpbuilding hp_building;
+    public hp_O2 hpo2_script;
+    public Money money_script;
+    public DrillTotal drilltotal_script;
 
+    public float money;
+    public float health;
+    public float oxygen;
+
+    public int iron_drill;
+    public int gold_drill;
+    public int diamond_drill;
+    public int oil_extractor;
+
+
+    //Auto save
+    public float timer = 10f;
+    
     void Update()
     {
         //player pos
@@ -55,10 +71,30 @@ public class Data : MonoBehaviour
             Save();
         }
 
+
+        timer -= Time.deltaTime;
+        if (timer <= 0) 
+        {
+            Save();
+            timer += 10;
+        }
+
+
+
     }
 
         public void Save()
         {
+            iron_drill = drilltotal_script.iron_drill;
+            gold_drill = drilltotal_script.gold_drill;
+            diamond_drill = drilltotal_script.diamond_drill;
+            oil_extractor = drilltotal_script.oil_extractor;
+
+            health = hpo2_script.health;
+            oxygen = hpo2_script.oxygen;
+            money = money_script.cash;
+
+            
             rm_1 = rm_building.is_build1;
             rm_2 = rm_building.is_build2;
             rm_3 = rm_building.is_build3;
@@ -85,7 +121,7 @@ public class Data : MonoBehaviour
             SaveLoad.SaveData(this);
         }
 
-    public void awake()
+    public void Start()
     {
         SaveLoadData data = SaveLoad.LoadData();
         _playerPos[0] = data._pos1;
@@ -94,10 +130,21 @@ public class Data : MonoBehaviour
         Vector3 pos = new Vector3(_playerPos[0], _playerPos[1], _playerPos[2]);
         _player.position = pos;
 
+        iron_drill = data.iron_drill;
+        gold_drill = data.gold_drill;
+        diamond_drill = data.diamond_drill;
+        oil_extractor = data.oil_extractor;
+        
+        
+        health = data.health;
+        money = data.money;
+        oxygen = data.oxygen;
+
+
         rm_1 = data.rm_1;
         rm_2 = data.rm_2;
         rm_3 = data.rm_3;
-        Debug.Log("" + rm_1);
+        
 
         arm_1 = data.arm_1;
         arm_2 = data.arm_2;
@@ -114,6 +161,15 @@ public class Data : MonoBehaviour
         hp_1 = data.hp_1;
         hp_2 = data.hp_2;
         hp_3 = data.hp_3;
+
+        drilltotal_script.iron_drill = iron_drill;
+        drilltotal_script.gold_drill = gold_drill;
+        drilltotal_script.diamond_drill = diamond_drill;
+        drilltotal_script.oil_extractor = oil_extractor;
+
+        hpo2_script.health = health;
+        hpo2_script.oxygen = oxygen;
+        money_script.cash = money;
 
         rm_building.is_build1 = rm_1;
         rm_building.is_build2 = rm_2;
