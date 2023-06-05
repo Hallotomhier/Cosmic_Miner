@@ -5,8 +5,18 @@ using UnityEngine;
 public class Drill : MonoBehaviour
 {
     public RaycastHit hit;
+    
+    public DrillTotal _drillTotal;
 
+    public GameObject[] _ironDrill;
     public GameObject _Ore;
+
+    public Money _money;
+
+    public float earn_cash;
+
+
+    public RmBuilding rm_building;
 
     void Start()
     {
@@ -22,15 +32,46 @@ public class Drill : MonoBehaviour
             _Ore = hit.transform.gameObject;
             if (hit.transform.CompareTag("Iron")) 
             {
-                if (Input.GetKey(KeyCode.E)) 
+                if (Input.GetKey(KeyCode.E) && _drillTotal.iron_drill >= 0) 
                 {
                     hit.transform.GetChild(0).gameObject.SetActive(true);
-                    GetComponent<DrillTotal>().iron_drill -= 1;
-                    _Ore.tag = "IronMineActive";
-
+                    hit.transform.tag = "IronMineActive";
+                    _drillTotal.iron_drill -= 1;
                 }
             
             }
         }
+        IronDrill();
+    }   
+
+
+
+    public void IronDrill() 
+    {
+        if (rm_building.upgrade == true) 
+        {
+            earn_cash = 2;
+        
+        }
+
+
+        if (_ironDrill[0].activeInHierarchy)  
+        {
+            _money.cash += earn_cash * Time.deltaTime;
+        }
+        if (_ironDrill[1].activeInHierarchy)
+        {
+            _money.cash += earn_cash * Time.deltaTime;
+        }
+        if (_ironDrill[2].activeInHierarchy)
+        {
+            _money.cash += earn_cash * Time.deltaTime;
+        }
+        if (_ironDrill[3].activeInHierarchy)
+        {
+            _money.cash += earn_cash * Time.deltaTime;
+        }
     }
+
+
 }

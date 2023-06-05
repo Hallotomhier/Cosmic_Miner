@@ -76,6 +76,7 @@ public class RmBuilding : MonoBehaviour
             build[0] = true;
             rm_button[0].SetActive(false);
             rm_button[1].SetActive(true);
+            upgrade = true;
         }
 
         if (is_build2 == true)
@@ -99,6 +100,7 @@ public class RmBuilding : MonoBehaviour
             rm_button[1].SetActive(false);
             rm_button[2].SetActive(false);
             is_build2 = false;
+            
         }
     }
 

@@ -55,10 +55,6 @@ public class Data : MonoBehaviour
             Save();
         }
 
-        if (Input.GetKeyDown(KeyCode.K)) 
-        {
-            Zuigmelul();
-        }
     }
 
         public void Save()
@@ -89,7 +85,7 @@ public class Data : MonoBehaviour
             SaveLoad.SaveData(this);
         }
 
-    public void Zuigmelul()
+    public void awake()
     {
         SaveLoadData data = SaveLoad.LoadData();
         _playerPos[0] = data._pos1;
