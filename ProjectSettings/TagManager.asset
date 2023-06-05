@@ -4,11 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - IronMine
   - Iron
   - IronMineActive
   - Oxygen
   - shop
+  - Gold
+  - GoldMineActive
+  - Diamond
+  - DiamondMineActive
   layers:
   - Default
   - TransparentFX

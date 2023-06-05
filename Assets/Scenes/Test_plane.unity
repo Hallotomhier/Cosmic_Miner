@@ -4903,15 +4903,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _drillTotal: {fileID: 944409447}
+  rm_building: {fileID: 1180790843}
+  _money: {fileID: 944409446}
   _ironDrill:
   - {fileID: 283163915}
   - {fileID: 2070260666}
   - {fileID: 1009939151}
   - {fileID: 692532020}
+  _goldDrill: []
+  _diamondDrill: []
+  _OilExtractor: []
   _Ore: {fileID: 0}
-  _money: {fileID: 944409446}
-  earn_cash: 1
-  rm_building: {fileID: 1180790843}
+  iron_earn_cash: 0
 --- !u!114 &961739757
 MonoBehaviour:
   m_ObjectHideFlags: 0

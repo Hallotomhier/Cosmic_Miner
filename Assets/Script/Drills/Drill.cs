@@ -7,16 +7,21 @@ public class Drill : MonoBehaviour
     public RaycastHit hit;
     
     public DrillTotal _drillTotal;
-
-    public GameObject[] _ironDrill;
-    public GameObject _Ore;
-
+    public RmBuilding rm_building;
     public Money _money;
 
-    public float earn_cash;
+    public GameObject[] _ironDrill;
+    public GameObject[] _goldDrill;
+    public GameObject[] _diamondDrill;
+    public GameObject[] _OilExtractor;
+    public GameObject _Ore;
+
+    
+
+    public float iron_earn_cash;
 
 
-    public RmBuilding rm_building;
+    
 
     void Start()
     {
@@ -26,7 +31,9 @@ public class Drill : MonoBehaviour
     
     void Update()
     {
-        
+        GoldDrill();
+        IronDrill();
+        DiamondDrill();
         if (Physics.Raycast(transform.position, transform.forward, out hit, 5f)) 
         {
             _Ore = hit.transform.gameObject;
@@ -40,8 +47,32 @@ public class Drill : MonoBehaviour
                 }
             
             }
+
+
+            if (hit.transform.CompareTag("Gold"))
+            {
+                if (Input.GetKey(KeyCode.E) && _drillTotal.gold_drill >= 0)
+                {
+                    hit.transform.GetChild(0).gameObject.SetActive(true);
+                    hit.transform.tag = "GoldMineActive";
+                    _drillTotal.gold_drill -= 1;
+                }
+
+            }
+
+
+            if (hit.transform.CompareTag("Diamond"))
+            {
+                if (Input.GetKey(KeyCode.E) && _drillTotal.diamond_drill >= 0)
+                {
+                    hit.transform.GetChild(0).gameObject.SetActive(true);
+                    hit.transform.tag = "DiamondMineActive";
+                    _drillTotal.diamond_drill -= 1;
+                }
+
+            }
         }
-        IronDrill();
+        
     }   
 
 
@@ -50,27 +81,42 @@ public class Drill : MonoBehaviour
     {
         if (rm_building.upgrade == true) 
         {
-            earn_cash = 2;
+            iron_earn_cash = 2;
         
         }
 
 
         if (_ironDrill[0].activeInHierarchy)  
         {
-            _money.cash += earn_cash * Time.deltaTime;
+            _money.cash += iron_earn_cash * Time.deltaTime;
         }
         if (_ironDrill[1].activeInHierarchy)
         {
-            _money.cash += earn_cash * Time.deltaTime;
+            _money.cash += iron_earn_cash * Time.deltaTime;
         }
         if (_ironDrill[2].activeInHierarchy)
         {
-            _money.cash += earn_cash * Time.deltaTime;
+            _money.cash += iron_earn_cash * Time.deltaTime;
         }
         if (_ironDrill[3].activeInHierarchy)
         {
-            _money.cash += earn_cash * Time.deltaTime;
+            _money.cash += iron_earn_cash * Time.deltaTime;
         }
+    }
+
+    public void GoldDrill() 
+    { 
+    
+    
+    }
+
+
+    public void DiamondDrill() 
+    { 
+    
+    
+    
+    
     }
 
 
