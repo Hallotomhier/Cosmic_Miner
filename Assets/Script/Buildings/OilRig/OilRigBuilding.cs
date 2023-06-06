@@ -75,10 +75,9 @@ public class OilRigBuilding : MonoBehaviour
         {
             if(build[0] == true && build[1] == true && build[2] == false)
             {
-                
-               
                 money_script.cash -= price[2];
                 is_build3 = true;
+                Debug.Log("OILRIG PHASE 3 pressed");
             }
         }
 
@@ -118,6 +117,7 @@ public class OilRigBuilding : MonoBehaviour
             oil_button[1].SetActive(false);
             oil_button[2].SetActive(false);
             is_build2 = false;
+            Debug.Log(is_build3);
 
         }
 

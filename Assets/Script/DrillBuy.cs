@@ -9,6 +9,7 @@ public class DrillBuy : MonoBehaviour
     public RaycastHit hit;
     public Money money;
     public DrillTotal drill_script;
+    public float[] price;
     
     
     void Start()
@@ -43,7 +44,11 @@ public class DrillBuy : MonoBehaviour
 
     public void BuyIronDrill() 
     {
-        money.cash -= 50;
-        drill_script.iron_drill += 1;
+        if(money.cash >= price[0]) 
+        {
+            money.cash =- price[0];
+            drill_script.iron_drill += 1;
+        }
+        
     }
 }

@@ -44,20 +44,27 @@ public class SaveLoadData
     public int diamond_drill;
     public int oil_extractor;
 
+    public bool iron_isActive0;
+    public bool iron_isActive1;
+    public bool iron_isActive2;
+    public bool iron_isActive3;
+
 
     public SaveLoadData(Data data) 
     {
+        iron_isActive0 = data.iron_isActive[0];
+        iron_isActive1 = data.iron_isActive[1];
+        iron_isActive2 = data.iron_isActive[2];
+        iron_isActive3 = data.iron_isActive[3];
+
         iron_drill = data.iron_drill;
         gold_drill = data.gold_drill;
         diamond_drill = data.gold_drill;
         oil_extractor = data.oil_extractor;
 
-
         money = data.money;
         health = data.health;
         oxygen = data.oxygen;
-
-
 
         rm_1 = data.rm_1;
         rm_2 = data.rm_2;
@@ -83,8 +90,5 @@ public class SaveLoadData
         _pos1 = data._playerPos[0];
         _pos2 = data._playerPos[1];
         _pos3 = data._playerPos[2];
-        
-        
-    
     }
 }

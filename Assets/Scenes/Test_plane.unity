@@ -1680,7 +1680,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1365808340}
   m_Direction: 1
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -4961,11 +4961,30 @@ MonoBehaviour:
   - {fileID: 2117611630}
   - {fileID: 575762835}
   - {fileID: 1496021993}
-  _goldDrill: []
-  _diamondDrill: []
-  _OilExtractor: []
+  _goldDrill:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _diamondDrill:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _OilExtractor:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _Ore: {fileID: 0}
   iron_earn_cash: 1
+  gold_earn_cash: 0
+  diamond_earn_cash: 0
+  oil_earn_cash: 0
+  iron_isActive: 00000000
+  gold_isActive: 00000000
+  diamond_isActive: 00000000
+  oil_isActive: 00000000
 --- !u!114 &961739757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4981,6 +5000,7 @@ MonoBehaviour:
   panel: {fileID: 1712374767}
   money: {fileID: 944409446}
   drill_script: {fileID: 944409447}
+  price: []
 --- !u!1 &963730117
 GameObject:
   m_ObjectHideFlags: 0
@@ -8710,6 +8730,7 @@ MonoBehaviour:
   hp_1: 0
   hp_2: 0
   hp_3: 0
+  drill_script: {fileID: 961739756}
   rm_building: {fileID: 1180790843}
   arm_building: {fileID: 1397110397}
   o2_building: {fileID: 1000078557}
@@ -8725,6 +8746,10 @@ MonoBehaviour:
   gold_drill: 0
   diamond_drill: 0
   oil_extractor: 0
+  iron_isActive: 00000000
+  gold_isActive: 00000000
+  diamond_isActive: 00000000
+  oil_isActive: 00000000
   timer: 10
 --- !u!4 &1687863937
 Transform:

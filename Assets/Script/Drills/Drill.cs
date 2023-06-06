@@ -16,12 +16,18 @@ public class Drill : MonoBehaviour
     public GameObject[] _OilExtractor;
     public GameObject _Ore;
 
-    
-
     public float iron_earn_cash;
+    public float gold_earn_cash;
+    public float diamond_earn_cash;
+    public float oil_earn_cash;
+
+    public bool[] iron_isActive;
+    public bool[] gold_isActive;
+    public bool[] diamond_isActive;
+    public bool[] oil_isActive;
 
 
-    
+
 
     void Start()
     {
@@ -31,6 +37,8 @@ public class Drill : MonoBehaviour
     
     void Update()
     {
+
+        ToSave();
         GoldDrill();
         IronDrill();
         DiamondDrill();
@@ -73,8 +81,33 @@ public class Drill : MonoBehaviour
             }
         }
         
-    }   
+    }
 
+
+
+    public void ToSave() 
+    {
+        if (iron_isActive[0] == true) 
+        {
+            _ironDrill[0].SetActive(true);
+        }
+
+        if (iron_isActive[1] == true)
+        {
+            _ironDrill[1].SetActive(true);
+        }
+
+        if (iron_isActive[2] == true)
+        {
+            _ironDrill[2].SetActive(true);
+        }
+
+        if (iron_isActive[3] == true)
+        {
+            _ironDrill[3].SetActive(true);
+        }
+
+    }
 
 
     public void IronDrill() 
@@ -89,18 +122,22 @@ public class Drill : MonoBehaviour
         if (_ironDrill[0].activeInHierarchy)  
         {
             _money.cash += iron_earn_cash * Time.deltaTime;
+            iron_isActive[0] = true;
         }
         if (_ironDrill[1].activeInHierarchy)
         {
             _money.cash += iron_earn_cash * Time.deltaTime;
+            iron_isActive[1] = true;
         }
         if (_ironDrill[2].activeInHierarchy)
         {
             _money.cash += iron_earn_cash * Time.deltaTime;
+            iron_isActive[2] = true;
         }
         if (_ironDrill[3].activeInHierarchy)
         {
             _money.cash += iron_earn_cash * Time.deltaTime;
+            iron_isActive[3] = true;
         }
     }
 

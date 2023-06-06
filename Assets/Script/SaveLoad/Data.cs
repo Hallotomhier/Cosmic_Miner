@@ -35,6 +35,7 @@ public class Data : MonoBehaviour
     public bool hp_3;
 
     //scripts
+    public Drill drill_script;
     public RmBuilding rm_building;
     public ArmBuilding arm_building;
     public O2building o2_building;
@@ -44,14 +45,22 @@ public class Data : MonoBehaviour
     public Money money_script;
     public DrillTotal drilltotal_script;
 
+    //Money health oxygen
     public float money;
     public float health;
     public float oxygen;
 
+    //totale drills
     public int iron_drill;
     public int gold_drill;
     public int diamond_drill;
     public int oil_extractor;
+
+    //save voor drills
+    public bool[] iron_isActive;
+    public bool[] gold_isActive;
+    public bool[] diamond_isActive;
+    public bool[] oil_isActive;
 
 
     //Auto save
@@ -83,43 +92,48 @@ public class Data : MonoBehaviour
 
     }
 
-        public void Save()
-        {
-            iron_drill = drilltotal_script.iron_drill;
-            gold_drill = drilltotal_script.gold_drill;
-            diamond_drill = drilltotal_script.diamond_drill;
-            oil_extractor = drilltotal_script.oil_extractor;
+    public void Save()
+    {
+        iron_drill = drilltotal_script.iron_drill;
+        gold_drill = drilltotal_script.gold_drill;
+        diamond_drill = drilltotal_script.diamond_drill;
+        oil_extractor = drilltotal_script.oil_extractor;
 
-            health = hpo2_script.health;
-            oxygen = hpo2_script.oxygen;
-            money = money_script.cash;
-
-            
-            rm_1 = rm_building.is_build1;
-            rm_2 = rm_building.is_build2;
-            rm_3 = rm_building.is_build3;
-
-            arm_1 = arm_building.is_build1;
-            arm_2 = arm_building.is_build2;
-            arm_3 = arm_building.is_build3;
-
-            o2_1 = o2_building.is_build1;
-            o2_2 = o2_building.is_build2;
-            o2_3 = o2_building.is_build3;
-
-            oil_1 = oil_building.is_build1;
-            oil_2 = oil_building.is_build2;
-            oil_3 = oil_building.is_build3;
-
-            hp_1 = hp_building.is_build1;
-            hp_2 = hp_building.is_build2;
-            hp_3 = hp_building.is_build3;
+        health = hpo2_script.health;
+        oxygen = hpo2_script.oxygen;
+        money = money_script.cash;
 
 
+        rm_1 = rm_building.is_build1;
+        rm_2 = rm_building.is_build2;
+        rm_3 = rm_building.is_build3;
+
+        arm_1 = arm_building.is_build1;
+        arm_2 = arm_building.is_build2;
+        arm_3 = arm_building.is_build3;
+
+        o2_1 = o2_building.is_build1;
+        o2_2 = o2_building.is_build2;
+        o2_3 = o2_building.is_build3;
+
+        oil_1 = oil_building.is_build1;
+        oil_2 = oil_building.is_build2;
+        oil_3 = oil_building.is_build3;
+
+        hp_1 = hp_building.is_build1;
+        hp_2 = hp_building.is_build2;
+        hp_3 = hp_building.is_build3;
+
+        iron_isActive[0] = drill_script.iron_isActive[0];
+        iron_isActive[1] = drill_script.iron_isActive[1];
+        iron_isActive[2] = drill_script.iron_isActive[2];
+        iron_isActive[3] = drill_script.iron_isActive[3];
 
 
-            SaveLoad.SaveData(this);
-        }
+
+
+        SaveLoad.SaveData(this);
+    }
 
     public void Start()
     {
@@ -162,6 +176,11 @@ public class Data : MonoBehaviour
         hp_2 = data.hp_2;
         hp_3 = data.hp_3;
 
+        iron_isActive[0] = data.iron_isActive0;
+        iron_isActive[1] = data.iron_isActive1;
+        iron_isActive[2] = data.iron_isActive2;
+        iron_isActive[3] = data.iron_isActive3;
+
         drilltotal_script.iron_drill = iron_drill;
         drilltotal_script.gold_drill = gold_drill;
         drilltotal_script.diamond_drill = diamond_drill;
@@ -190,6 +209,11 @@ public class Data : MonoBehaviour
         hp_building.is_build1 = hp_1;
         hp_building.is_build2 = hp_2;
         hp_building.is_build3 = hp_3;
+
+        drill_script.iron_isActive[0] = iron_isActive[0];
+        drill_script.iron_isActive[1] = iron_isActive[1];
+        drill_script.iron_isActive[2] = iron_isActive[2];
+        drill_script.iron_isActive[3] = iron_isActive[3];
 
 
     }
