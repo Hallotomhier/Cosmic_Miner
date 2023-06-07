@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     public Vector3 move;
     public float speed;
     public float sprintSpeed;
-    public OilRigBuilding oilRig;
+    //public OilRigBuilding oilRig;
     public bool upgrade_active;
     void Start()
     {
@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        upgrade_active = oilRig.upgrade;
+        //upgrade_active = oilRig.upgrade;
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         move.x = x;

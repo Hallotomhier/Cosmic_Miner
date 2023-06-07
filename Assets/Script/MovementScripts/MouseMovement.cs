@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class  MouseMovement: MonoBehaviour
+public class MouseMovement : MonoBehaviour
 {
     public float mousSens, mouseY, mouseX ,rotY;
     public Vector3 dir , clampY;
