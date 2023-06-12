@@ -54,10 +54,31 @@ public class ScreenRes : MonoBehaviour
             Screen.SetResolution(2560, 1440, FullScreenMode.Windowed);
             fsOn.GetComponent<Toggle>().isOn = false;  
         }
-
+        
         // if(label.GetComponent<>() == "1920 x 1080")
         // {
-        //     Debug.Log("HEY");
+            //  Debug.Log("HEY");
         // }
+        
+    }
+    public void Resolution1()
+    {
+        Screen.SetResolution(720, 480, FullScreenMode.Windowed);
+        fsOn.GetComponent<Toggle>().isOn = false;
+    }
+    public void Resolution2()
+    {
+        Screen.SetResolution(1280, 720, FullScreenMode.Windowed);
+        fsOn.GetComponent<Toggle>().isOn = false;
+    }
+    public void Resolution3()
+    {
+        Screen.SetResolution(1960, 1080, FullScreenMode.Windowed);
+        fsOn.GetComponent<Toggle>().isOn = false;
+    }
+    public void Resolution4()
+    {
+        Screen.SetResolution(2560, 1440, FullScreenMode.Windowed);
+        fsOn.GetComponent<Toggle>().isOn = false;
     }
 }
