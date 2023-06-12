@@ -49,6 +49,11 @@ public class SaveLoadData
     public bool iron_isActive2;
     public bool iron_isActive3;
 
+    public bool gold_isActive0;
+    public bool gold_isActive1;
+    public bool gold_isActive2;
+    public bool gold_isActive3;
+
 
     public SaveLoadData(Data data) 
     {
@@ -56,6 +61,11 @@ public class SaveLoadData
         iron_isActive1 = data.iron_isActive[1];
         iron_isActive2 = data.iron_isActive[2];
         iron_isActive3 = data.iron_isActive[3];
+
+        gold_isActive0 = data.gold_isActive[0];
+        gold_isActive1 = data.gold_isActive[1];
+        gold_isActive2 = data.gold_isActive[2];
+        gold_isActive3 = data.gold_isActive[3];
 
         iron_drill = data.iron_drill;
         gold_drill = data.gold_drill;

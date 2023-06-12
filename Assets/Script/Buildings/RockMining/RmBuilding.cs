@@ -65,7 +65,7 @@ public class RmBuilding : MonoBehaviour
             {
                 
                 money_script.cash -= price[2];
-                
+                is_build3 = true;
             }
         }
     }

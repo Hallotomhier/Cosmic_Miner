@@ -46,9 +46,18 @@ public class DrillBuy : MonoBehaviour
     {
         if(money.cash >= price[0]) 
         {
-            money.cash =- price[0];
+            money.cash -= price[0];
             drill_script.iron_drill += 1;
         }
         
+    }
+
+    public void BuyGoldDrill() 
+    {
+        if (money.cash >= price[1]) 
+        {
+            money.cash -= price[1];
+            drill_script.gold_drill += 1;
+        }
     }
 }

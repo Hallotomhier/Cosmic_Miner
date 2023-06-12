@@ -142,9 +142,28 @@ public class Drill : MonoBehaviour
     }
 
     public void GoldDrill() 
-    { 
-    
-    
+    {
+        if (_goldDrill[0].activeInHierarchy)
+        {
+            _money.cash += gold_earn_cash * Time.deltaTime;
+            gold_isActive[0] = true;
+        }
+        if (_goldDrill[1].activeInHierarchy)
+        {
+            _money.cash += gold_earn_cash * Time.deltaTime;
+            gold_isActive[1] = true;
+        }
+        if (_goldDrill[2].activeInHierarchy)
+        {
+            _money.cash += gold_earn_cash * Time.deltaTime;
+            gold_isActive[2] = true;
+        }
+        if (_goldDrill[3].activeInHierarchy)
+        {
+            _money.cash += gold_earn_cash * Time.deltaTime;
+            gold_isActive[3] = true;
+        }
+
     }
 
 

@@ -129,6 +129,11 @@ public class Data : MonoBehaviour
         iron_isActive[2] = drill_script.iron_isActive[2];
         iron_isActive[3] = drill_script.iron_isActive[3];
 
+        gold_isActive[0] = drill_script.gold_isActive[0];
+        gold_isActive[1] = drill_script.gold_isActive[1];
+        gold_isActive[2] = drill_script.gold_isActive[2];
+        gold_isActive[3] = drill_script.gold_isActive[3];
+
 
 
 
@@ -181,6 +186,11 @@ public class Data : MonoBehaviour
         iron_isActive[2] = data.iron_isActive2;
         iron_isActive[3] = data.iron_isActive3;
 
+        gold_isActive[0] = data.gold_isActive0;
+        gold_isActive[1] = data.gold_isActive1;
+        gold_isActive[2] = data.gold_isActive2;
+        gold_isActive[3] = data.gold_isActive3;
+
         drilltotal_script.iron_drill = iron_drill;
         drilltotal_script.gold_drill = gold_drill;
         drilltotal_script.diamond_drill = diamond_drill;
@@ -214,6 +224,11 @@ public class Data : MonoBehaviour
         drill_script.iron_isActive[1] = iron_isActive[1];
         drill_script.iron_isActive[2] = iron_isActive[2];
         drill_script.iron_isActive[3] = iron_isActive[3];
+
+        drill_script.gold_isActive[0] = gold_isActive[0];
+        drill_script.gold_isActive[1] = gold_isActive[1];
+        drill_script.gold_isActive[2] = gold_isActive[2];
+        drill_script.gold_isActive[3] = gold_isActive[3];
 
 
     }
