@@ -12,6 +12,8 @@ public class hp_O2 : MonoBehaviour
     public Vector3 respawn_pos;
     public AirSystem airsystem;
     public bool insideair;
+    public Transform player;
+    public Money money;
 
     
     void Update()
@@ -45,8 +47,9 @@ public class hp_O2 : MonoBehaviour
         } 
         if(health <= 0) 
         {
-            health = 0;
-            Debug.Log("die");
+            player.transform.position = respawn_pos;
+            health = 100;
+            money.cash -= 200;
             
         }
     
