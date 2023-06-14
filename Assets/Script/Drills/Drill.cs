@@ -121,22 +121,22 @@ public class Drill : MonoBehaviour
 
         if (_ironDrill[0].activeInHierarchy)  
         {
-            _money.cash += iron_earn_cash * Time.deltaTime;
+            _money.iron += iron_earn_cash * Time.deltaTime;
             iron_isActive[0] = true;
         }
         if (_ironDrill[1].activeInHierarchy)
         {
-            _money.cash += iron_earn_cash * Time.deltaTime;
+            _money.iron += iron_earn_cash * Time.deltaTime;
             iron_isActive[1] = true;
         }
         if (_ironDrill[2].activeInHierarchy)
         {
-            _money.cash += iron_earn_cash * Time.deltaTime;
+            _money.iron += iron_earn_cash * Time.deltaTime;
             iron_isActive[2] = true;
         }
         if (_ironDrill[3].activeInHierarchy)
         {
-            _money.cash += iron_earn_cash * Time.deltaTime;
+            _money.iron += iron_earn_cash * Time.deltaTime;
             iron_isActive[3] = true;
         }
     }
@@ -145,22 +145,22 @@ public class Drill : MonoBehaviour
     {
         if (_goldDrill[0].activeInHierarchy)
         {
-            _money.cash += gold_earn_cash * Time.deltaTime;
+            _money.gold += gold_earn_cash * Time.deltaTime;
             gold_isActive[0] = true;
         }
         if (_goldDrill[1].activeInHierarchy)
         {
-            _money.cash += gold_earn_cash * Time.deltaTime;
+            _money.gold += gold_earn_cash * Time.deltaTime;
             gold_isActive[1] = true;
         }
         if (_goldDrill[2].activeInHierarchy)
         {
-            _money.cash += gold_earn_cash * Time.deltaTime;
+            _money.gold += gold_earn_cash * Time.deltaTime;
             gold_isActive[2] = true;
         }
         if (_goldDrill[3].activeInHierarchy)
         {
-            _money.cash += gold_earn_cash * Time.deltaTime;
+            _money.gold += gold_earn_cash * Time.deltaTime;
             gold_isActive[3] = true;
         }
 
