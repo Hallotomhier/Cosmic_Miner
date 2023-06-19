@@ -5,7 +5,7 @@ using UnityEngine;
 public class DebugMenu : MonoBehaviour
 {
     public Money money;
-    public Movement move;
+    
     void Start()
     {
         
@@ -20,15 +20,7 @@ public class DebugMenu : MonoBehaviour
         
         }
 
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            move.sprintSpeed = 15;
-
-        }
-        else
-        {
-            move.sprintSpeed=7;
-        }
+        
             
             
     }

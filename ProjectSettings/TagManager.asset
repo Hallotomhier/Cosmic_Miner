@@ -12,6 +12,7 @@ TagManager:
   - GoldMineActive
   - Diamond
   - DiamondMineActive
+  - sell
   layers:
   - Default
   - TransparentFX

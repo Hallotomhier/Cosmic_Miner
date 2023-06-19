@@ -50,6 +50,10 @@ public class Data : MonoBehaviour
     public float health;
     public float oxygen;
 
+    public float iron;
+    public float gold;
+    public float diamond;
+
     //totale drills
     public int iron_drill;
     public int gold_drill;
@@ -103,6 +107,10 @@ public class Data : MonoBehaviour
         oxygen = hpo2_script.oxygen;
         money = money_script.cash;
 
+        iron = money_script.iron;
+        gold = money_script.gold;
+        diamond = money_script.diamond;
+
 
         rm_1 = rm_building.is_build1;
         rm_2 = rm_building.is_build2;
@@ -134,6 +142,11 @@ public class Data : MonoBehaviour
         gold_isActive[2] = drill_script.gold_isActive[2];
         gold_isActive[3] = drill_script.gold_isActive[3];
 
+        diamond_isActive[0] = drill_script.diamond_isActive[0];
+        diamond_isActive[1] = drill_script.diamond_isActive[1];
+        diamond_isActive[2] = drill_script.diamond_isActive[2];
+        
+
 
 
 
@@ -158,6 +171,10 @@ public class Data : MonoBehaviour
         health = data.health;
         money = data.money;
         oxygen = data.oxygen;
+
+        iron = data.iron;
+        gold = data.gold;
+        diamond = data.diamond;
 
 
         rm_1 = data.rm_1;
@@ -191,6 +208,11 @@ public class Data : MonoBehaviour
         gold_isActive[2] = data.gold_isActive2;
         gold_isActive[3] = data.gold_isActive3;
 
+        diamond_isActive[0] = data.diamond_isActive0;
+        diamond_isActive[1] = data.diamond_isActive1;
+        diamond_isActive[2] = data.diamond_isActive2;
+        
+
         drilltotal_script.iron_drill = iron_drill;
         drilltotal_script.gold_drill = gold_drill;
         drilltotal_script.diamond_drill = diamond_drill;
@@ -199,6 +221,10 @@ public class Data : MonoBehaviour
         hpo2_script.health = health;
         hpo2_script.oxygen = oxygen;
         money_script.cash = money;
+
+        money_script.iron = iron;
+        money_script.gold = gold;
+        money_script.diamond = diamond;
 
         rm_building.is_build1 = rm_1;
         rm_building.is_build2 = rm_2;
@@ -230,6 +256,10 @@ public class Data : MonoBehaviour
         drill_script.gold_isActive[2] = gold_isActive[2];
         drill_script.gold_isActive[3] = gold_isActive[3];
 
+        drill_script.diamond_isActive[0] = diamond_isActive[0];
+        drill_script.diamond_isActive[1] = diamond_isActive[1];
+        drill_script.diamond_isActive[2] = diamond_isActive[2];
+        
 
     }
 

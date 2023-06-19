@@ -8,6 +8,7 @@ public class Drill : MonoBehaviour
     
     public DrillTotal _drillTotal;
     public RmBuilding rm_building;
+    public DrillEarn iron_earn;
     public Money _money;
 
     public GameObject[] _ironDrill;
@@ -16,32 +17,18 @@ public class Drill : MonoBehaviour
     public GameObject[] _OilExtractor;
     public GameObject _Ore;
 
-    public float iron_earn_cash;
-    public float gold_earn_cash;
-    public float diamond_earn_cash;
-    public float oil_earn_cash;
-
     public bool[] iron_isActive;
     public bool[] gold_isActive;
     public bool[] diamond_isActive;
     public bool[] oil_isActive;
 
-
-
-
-    void Start()
-    {
-        
-    }
-
-    
     void Update()
     {
-
         ToSave();
         GoldDrill();
         IronDrill();
         DiamondDrill();
+
         if (Physics.Raycast(transform.position, transform.forward, out hit, 5f)) 
         {
             _Ore = hit.transform.gameObject;
@@ -83,10 +70,9 @@ public class Drill : MonoBehaviour
         
     }
 
-
-
     public void ToSave() 
     {
+        //IronSave
         if (iron_isActive[0] == true) 
         {
             _ironDrill[0].SetActive(true);
@@ -107,36 +93,62 @@ public class Drill : MonoBehaviour
             _ironDrill[3].SetActive(true);
         }
 
+        //GoldSave
+        if (gold_isActive[0] == true) 
+        {
+            _goldDrill[0].SetActive(true);
+        }
+
+        if (gold_isActive[1] == true)
+        {
+            _goldDrill[1].SetActive(true);
+        }
+
+        if (gold_isActive[2] == true)
+        {
+            _goldDrill[2].SetActive(true);
+        }
+
+        if (gold_isActive[3] == true)
+        {
+            _goldDrill[3].SetActive(true);
+        }
+
+        //DiamondSave
+        if (diamond_isActive[0] == true) 
+        {
+            _diamondDrill[0].SetActive(true);
+        }
+
+        if (diamond_isActive[1] == true)
+        {
+            _diamondDrill[1].SetActive(true);
+        }
+        
+        if (diamond_isActive[2] == true)
+        {
+            _diamondDrill[2].SetActive(true);
+        }
+    
     }
 
 
-    public void IronDrill() 
-    {
-        if (rm_building.upgrade == true) 
-        {
-            iron_earn_cash = 2;
-        
-        }
-
-
+    public void IronDrill()
+    { 
         if (_ironDrill[0].activeInHierarchy)  
         {
-            _money.iron += iron_earn_cash * Time.deltaTime;
             iron_isActive[0] = true;
         }
         if (_ironDrill[1].activeInHierarchy)
         {
-            _money.iron += iron_earn_cash * Time.deltaTime;
             iron_isActive[1] = true;
         }
         if (_ironDrill[2].activeInHierarchy)
-        {
-            _money.iron += iron_earn_cash * Time.deltaTime;
+        { 
             iron_isActive[2] = true;
         }
         if (_ironDrill[3].activeInHierarchy)
-        {
-            _money.iron += iron_earn_cash * Time.deltaTime;
+        {  
             iron_isActive[3] = true;
         }
     }
@@ -145,34 +157,38 @@ public class Drill : MonoBehaviour
     {
         if (_goldDrill[0].activeInHierarchy)
         {
-            _money.gold += gold_earn_cash * Time.deltaTime;
             gold_isActive[0] = true;
         }
         if (_goldDrill[1].activeInHierarchy)
         {
-            _money.gold += gold_earn_cash * Time.deltaTime;
             gold_isActive[1] = true;
         }
         if (_goldDrill[2].activeInHierarchy)
         {
-            _money.gold += gold_earn_cash * Time.deltaTime;
             gold_isActive[2] = true;
         }
         if (_goldDrill[3].activeInHierarchy)
         {
-            _money.gold += gold_earn_cash * Time.deltaTime;
             gold_isActive[3] = true;
         }
-
     }
 
 
     public void DiamondDrill() 
-    { 
-    
-    
-    
-    
+    {
+        if (_diamondDrill[0].activeInHierarchy)
+        {
+            diamond_isActive[0] = true;
+        }
+        if (_diamondDrill[1].activeInHierarchy)
+        {
+            diamond_isActive[1] = true;
+        }
+        if (_diamondDrill[2].activeInHierarchy)
+        {
+            diamond_isActive[2] = true;
+        }
+        
     }
 
 

@@ -39,6 +39,10 @@ public class SaveLoadData
     public float health;
     public float oxygen;
 
+    public float iron;
+    public float gold;
+    public float diamond;
+
     public int iron_drill;
     public int gold_drill;
     public int diamond_drill;
@@ -54,6 +58,11 @@ public class SaveLoadData
     public bool gold_isActive2;
     public bool gold_isActive3;
 
+    public bool diamond_isActive0;
+    public bool diamond_isActive1;
+    public bool diamond_isActive2;
+    public bool diamond_isActive3;
+
 
     public SaveLoadData(Data data) 
     {
@@ -67,6 +76,11 @@ public class SaveLoadData
         gold_isActive2 = data.gold_isActive[2];
         gold_isActive3 = data.gold_isActive[3];
 
+        diamond_isActive0 = data.diamond_isActive[0];
+        diamond_isActive1 = data.diamond_isActive[1];
+        diamond_isActive2 = data.diamond_isActive[2];
+        
+
         iron_drill = data.iron_drill;
         gold_drill = data.gold_drill;
         diamond_drill = data.gold_drill;
@@ -75,6 +89,10 @@ public class SaveLoadData
         money = data.money;
         health = data.health;
         oxygen = data.oxygen;
+
+        iron = data.iron;
+        gold = data.gold;
+        diamond = data.diamond;
 
         rm_1 = data.rm_1;
         rm_2 = data.rm_2;
