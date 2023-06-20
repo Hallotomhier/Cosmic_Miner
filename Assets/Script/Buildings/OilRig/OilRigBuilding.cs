@@ -11,7 +11,7 @@ public class OilRigBuilding : MonoBehaviour
     public float money;
     public bool[] build;
     public GameObject[] oil_button;
-    public bool upgrade;
+    public bool[] upgrade;
 
 
 
@@ -93,6 +93,7 @@ public class OilRigBuilding : MonoBehaviour
             build[0] = true;
             oil_button[0].SetActive(false);
             oil_button[1].SetActive(true);
+            upgrade[0] = true;
         }
 
         if (is_build2 == true)
@@ -104,6 +105,8 @@ public class OilRigBuilding : MonoBehaviour
             oil_button[1].SetActive(false);
             oil_button[2].SetActive(true);
             is_build1 = false;
+            upgrade[0] = true;
+            upgrade[1] = true;
 
         }
 
@@ -112,12 +115,14 @@ public class OilRigBuilding : MonoBehaviour
             oil_building[2].SetActive(true);
             oil_building[1].SetActive(false);
             build[2] = true;
-            upgrade = true;
             oil_button[0].SetActive(false);
             oil_button[1].SetActive(false);
             oil_button[2].SetActive(false);
             is_build2 = false;
             Debug.Log(is_build3);
+            upgrade[0] = true;
+            upgrade[1] = true;
+            upgrade[2] = true;
 
         }
 

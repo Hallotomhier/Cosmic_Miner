@@ -12,8 +12,6 @@ public class OilRigMenu : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             oil_rig_panel.SetActive(false);
-
-
         }
     }
 
@@ -27,5 +25,10 @@ public class OilRigMenu : MonoBehaviour
  
         }
         
+    }
+
+    private void OnTriggerExit(Collider player)
+    {
+        oil_rig_panel.SetActive(false); 
     }
 }

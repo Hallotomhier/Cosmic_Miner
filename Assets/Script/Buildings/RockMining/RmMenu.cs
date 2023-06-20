@@ -24,4 +24,9 @@ public class RmMenu : MonoBehaviour
             rm_panel.SetActive(true);
         }
     }
+
+    private void OnTriggerExit(Collider player)
+    {
+        rm_panel.SetActive(false);
+    }
 }

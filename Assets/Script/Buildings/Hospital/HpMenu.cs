@@ -24,4 +24,9 @@ public class HpMenu : MonoBehaviour
             hp_panel.SetActive(true);
         }
     }
+
+    private void OnTriggerExit(Collider player)
+    {
+        hp_panel.SetActive(false);
+    }
 }

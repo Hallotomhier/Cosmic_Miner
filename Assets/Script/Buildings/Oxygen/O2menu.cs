@@ -24,4 +24,9 @@ public class O2menu : MonoBehaviour
             o2_panel.SetActive(true);
         }
     }
+
+    private void OnTriggerExit(Collider player)
+    {
+        o2_panel.SetActive(false);
+    }
 }
