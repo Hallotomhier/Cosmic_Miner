@@ -170,12 +170,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _money: {fileID: 657972904}
-  rm_stand: {fileID: 0}
   diamond_drill: {fileID: 2033819477}
   player: {fileID: 189539532}
   total_earn: 0
   diamond_earn_cash: 0.8
-  upgrade: 0
 --- !u!65 &11364388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2940,12 +2938,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _money: {fileID: 657972904}
-  rm_stand: {fileID: 0}
   iron_drill: {fileID: 939733049}
   player: {fileID: 189539532}
   total_earn: 0
   iron_earn_cash: 1
-  upgrade: 0
 --- !u!65 &815811266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3340,12 +3336,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _money: {fileID: 657972904}
-  rm_stand: {fileID: 0}
   diamond_drill: {fileID: 1067037381}
   player: {fileID: 189539532}
   total_earn: 0
   diamond_earn_cash: 0.8
-  upgrade: 0
 --- !u!65 &875684906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3505,12 +3499,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _money: {fileID: 657972904}
-  rm_stand: {fileID: 0}
   gold_drill: {fileID: 198233597}
   player: {fileID: 189539532}
   total_earn: 0
   gold_earn_cash: 0.5
-  upgrade: 0
 --- !u!65 &903594233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3579,12 +3571,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _money: {fileID: 657972904}
-  rm_stand: {fileID: 0}
   iron_drill: {fileID: 59435377}
   player: {fileID: 189539532}
   total_earn: 0
   iron_earn_cash: 1
-  upgrade: 0
 --- !u!65 &920137368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4339,12 +4329,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _money: {fileID: 657972904}
-  rm_stand: {fileID: 0}
   gold_drill: {fileID: 1535665717}
   player: {fileID: 189539532}
   total_earn: 0
   gold_earn_cash: 0.5
-  upgrade: 0
 --- !u!65 &1303338569
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5083,12 +5071,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _money: {fileID: 657972904}
-  rm_stand: {fileID: 0}
   diamond_drill: {fileID: 1247752411}
   player: {fileID: 189539532}
   total_earn: 0
   diamond_earn_cash: 0.8
-  upgrade: 0
 --- !u!65 &1458378866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5974,12 +5960,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _money: {fileID: 657972904}
-  rm_stand: {fileID: 0}
   iron_drill: {fileID: 2088129928}
   player: {fileID: 189539532}
   total_earn: 0
   iron_earn_cash: 1
-  upgrade: 0
 --- !u!65 &1695648734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6699,12 +6683,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _money: {fileID: 657972904}
-  rm_stand: {fileID: 0}
   iron_drill: {fileID: 2113853092}
   player: {fileID: 189539532}
   total_earn: 0
   iron_earn_cash: 1
-  upgrade: 0
 --- !u!65 &1914053914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7376,16 +7358,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea1ab7161689244c860cdca85478beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oil_stand: {fileID: 0}
   panel: {fileID: 1292144346}
   money: {fileID: 657972904}
   drill_script: {fileID: 657972907}
   price:
   - 100
   - 200
-  upgrade: 
-  buttons: []
-  player: {fileID: 0}
 --- !u!114 &2062095117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7463,12 +7441,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _money: {fileID: 657972904}
-  rm_stand: {fileID: 0}
   gold_drill: {fileID: 2125907741}
   player: {fileID: 189539532}
   total_earn: 0
   gold_earn_cash: 0.5
-  upgrade: 0
 --- !u!65 &2063198302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7537,12 +7513,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _money: {fileID: 657972904}
-  rm_stand: {fileID: 0}
   gold_drill: {fileID: 1791597789}
   player: {fileID: 189539532}
   total_earn: 0
   gold_earn_cash: 0.5
-  upgrade: 0
 --- !u!65 &2072342605
 BoxCollider:
   m_ObjectHideFlags: 0
