@@ -8,7 +8,7 @@ public class ArmBuilding : MonoBehaviour
     public float money;
 
     public bool[] build;
-    public bool upgrade;
+    public bool[] upgrade;
 
     public GameObject[] arm_building;
     public GameObject[] arm_button;
@@ -75,6 +75,7 @@ public class ArmBuilding : MonoBehaviour
             build[0] = true;
             arm_button[0].SetActive(false);
             arm_button[1].SetActive(true);
+            upgrade[0] = true;
         }
 
         if (is_build2 == true) 
@@ -86,6 +87,9 @@ public class ArmBuilding : MonoBehaviour
             arm_button[1].SetActive(false);
             arm_button[2].SetActive(true);
             is_build1 = false;
+            upgrade[0] = true;
+            upgrade[1] = true;
+            
         }
 
         if (is_build3 == true) 
@@ -97,6 +101,9 @@ public class ArmBuilding : MonoBehaviour
             arm_button[1].SetActive(false);
             arm_button[2].SetActive(false);
             is_build2 = false;
+            upgrade[0] = true;
+            upgrade[1] = true;
+            upgrade[2] = true;
         }
     
     

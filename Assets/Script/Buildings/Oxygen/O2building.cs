@@ -8,7 +8,7 @@ public class O2building : MonoBehaviour
     public float money;
 
     public bool[] build;
-    public bool upgrade;
+    public bool[] upgrade;
 
     public GameObject[] o2_building;
     public GameObject[] o2_button;

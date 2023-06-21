@@ -5,10 +5,23 @@ using UnityEngine.UI;
 
 public class O2menu : MonoBehaviour
 {
+    public GameObject interact;
     public GameObject o2_panel;
     public Transform player;
     void Update()
     {
+        
+    }
+
+    void OnTriggerStay(Collider player)
+    {
+        interact.SetActive(true);
+        if (Input.GetKey(KeyCode.F))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            o2_panel.SetActive(true);
+        }
+
         if (!Input.GetKey(KeyCode.F))
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -16,17 +29,9 @@ public class O2menu : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider player)
-    {
-        if (Input.GetKey(KeyCode.F))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            o2_panel.SetActive(true);
-        }
-    }
-
     private void OnTriggerExit(Collider player)
     {
+        interact.SetActive(false);
         o2_panel.SetActive(false);
     }
 }

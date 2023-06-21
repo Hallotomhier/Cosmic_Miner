@@ -5,10 +5,23 @@ using UnityEngine.UI;
 
 public class ArmMenu : MonoBehaviour
 {
+    public GameObject interact;
     public GameObject arm_panel;
     public Transform player;
     void Update()
     {
+        
+    }
+
+    void OnTriggerStay(Collider player)
+    {
+        interact.SetActive(true);
+        if (Input.GetKey(KeyCode.F))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            arm_panel.SetActive(true);
+        }
+
         if (!Input.GetKey(KeyCode.F))
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -16,14 +29,11 @@ public class ArmMenu : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider player)
+    private void OnTriggerExit(Collider player)
     {
-        if (Input.GetKey(KeyCode.F))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            arm_panel.SetActive(true);
-        }
+        arm_panel.SetActive(false);
+        interact.SetActive(false);
     }
 
-    
+
 }

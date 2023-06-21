@@ -15,6 +15,7 @@ public class DrillBuy : MonoBehaviour
     public bool[] upgrade;
     public GameObject[] buttons;
     public Transform player;
+    public GameObject interact;
 
 
     void Update()
@@ -25,13 +26,14 @@ public class DrillBuy : MonoBehaviour
 
     public void OnTriggerStay(Collider player)
     {
-        if (Input.GetKey(KeyCode.E))
+        interact.SetActive(true);
+        if (Input.GetKey(KeyCode.F))
         {
             panel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
         }
 
-        if (!Input.GetKey(KeyCode.E))
+        if (!Input.GetKey(KeyCode.F))
         {
             panel.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
@@ -42,6 +44,7 @@ public class DrillBuy : MonoBehaviour
     public void OnTriggerExit(Collider player)
     {
         panel.SetActive(false);
+        interact.SetActive(false);
     }
 
     public void UpgradeCheck() 
