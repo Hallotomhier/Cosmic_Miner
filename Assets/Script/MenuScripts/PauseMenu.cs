@@ -5,6 +5,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject menu;
+    public GameObject settingsMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +20,12 @@ public class PauseMenu : MonoBehaviour
             if(menu.activeSelf)
             {
                 menu.SetActive(false);
+                // settingsMenu.SetActive(true);
             }
             else
             {
                 menu.SetActive(true);
+                // settingsMenu.SetActive(false);
             }
         }
     }
