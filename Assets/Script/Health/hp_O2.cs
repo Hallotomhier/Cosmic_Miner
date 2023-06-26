@@ -14,7 +14,9 @@ public class hp_O2 : MonoBehaviour
     public bool insideair;
     public Transform player;
     public Money money;
-
+    public GameObject bloodUI;
+    public GameObject deathScreen;
+    
     
     void Update()
     {
@@ -50,8 +52,17 @@ public class hp_O2 : MonoBehaviour
             player.transform.position = respawn_pos;
             health = 100;
             money.cash -= 200;
+            deathScreen.SetActive(true);
+            gameObject.SetActive(false);
             
         }
-    
+        if(health <= 30) 
+        {
+            bloodUI.SetActive(true);     
+        }
+        else
+        {
+            bloodUI.SetActive(false);     
+        }
     }
 }
