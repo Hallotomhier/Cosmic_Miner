@@ -17,7 +17,7 @@ public class ScreenRes : MonoBehaviour
     {
         Screen.SetResolution(1920, 1080, FullScreenMode.Windowed);
         // Screen.fullScreen = false;
-        fsOn.GetComponent<Toggle>().isOn = false;
+        fsOn.GetComponent<Toggle>().isOn = true;
         // dropDown = GetComponent<Dropdown>();
         // Debug.Log(dropDown.value);
         // Debug.Log(EventSystem.current.currentSelectedGameObject.name);
