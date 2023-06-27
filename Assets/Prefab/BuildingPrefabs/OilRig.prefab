@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4850536383265483365}
   - component: {fileID: 4850536383265483360}
   - component: {fileID: 4850536383265483367}
-  - component: {fileID: 4850536383265483366}
   m_Layer: 0
   m_Name: OilRig_trigger
   m_TagString: Untagged
@@ -55,20 +54,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4850536383265483366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4850536383265483364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3cf77c27b7f9ea428716dc7b9362a3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oil_rig_panel: {fileID: 0}
-  player: {fileID: 0}
 --- !u!1 &4850536383485183350
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +470,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  upgrade: 0
+  upgrade: 
   is_build1: 0
   is_build2: 0
   is_build3: 0

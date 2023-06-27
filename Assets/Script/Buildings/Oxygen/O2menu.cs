@@ -16,16 +16,18 @@ public class O2menu : MonoBehaviour
     void OnTriggerStay(Collider player)
     {
         interact.SetActive(true);
-        if (Input.GetKey(KeyCode.F))
+        if(Input.GetKey(KeyCode.F))
         {
             Cursor.lockState = CursorLockMode.None;
             o2_panel.SetActive(true);
+            Debug.Log("f");
         }
-
-        if (!Input.GetKey(KeyCode.F))
+        
+        if(!Input.GetKey(KeyCode.F))
         {
             Cursor.lockState = CursorLockMode.Locked;
             o2_panel.SetActive(false);
+            Debug.Log("niet");
         }
     }
 

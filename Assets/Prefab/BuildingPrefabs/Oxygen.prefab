@@ -144,7 +144,6 @@ GameObject:
   - component: {fileID: 7468503614346785356}
   - component: {fileID: 7468503614346785347}
   - component: {fileID: 7468503614346785346}
-  - component: {fileID: 7468503614346785357}
   m_Layer: 0
   m_Name: Oxygen_trigger
   m_TagString: Untagged
@@ -188,20 +187,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7468503614346785357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7468503614346785359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3cf77c27b7f9ea428716dc7b9362a3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oil_rig_panel: {fileID: 0}
-  player: {fileID: 0}
 --- !u!1 &7468503614350995609
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +400,7 @@ MonoBehaviour:
   - 300
   money: 0
   build: 000000
-  upgrade: 0
+  upgrade: 
   o2_building:
   - {fileID: 7468503614350995609}
   - {fileID: 7468503615757230258}
