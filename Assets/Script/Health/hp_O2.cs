@@ -54,6 +54,7 @@ public class hp_O2 : MonoBehaviour
             money.cash -= 200;
             deathScreen.SetActive(true);
             gameObject.SetActive(false);
+            Debug.Log("You died!");
             
         }
         if(health <= 30) 

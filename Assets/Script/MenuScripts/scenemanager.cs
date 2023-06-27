@@ -30,23 +30,23 @@ public class scenemanager : MonoBehaviour
             {
                 if(menu.activeSelf) 
             //  && settingsMenu.activeSelf
-            {
-                menu.SetActive(false);
-                settingsMenu.SetActive(true);
-                player.SetActive(false);
-                // paused = true;
-                Cursor.lockState = CursorLockMode.None;
-                Debug.Log("Paused the game.");
-            }
-            else
-            {
-                menu.SetActive(true);
-                settingsMenu.SetActive(false);
-                player.SetActive(true);
-                // paused = false;
-                Cursor.lockState = CursorLockMode.Locked;
-                Debug.Log("Unpaused the game.");
-            }
+                {
+                    menu.SetActive(false);
+                    settingsMenu.SetActive(true);
+                    player.SetActive(false);
+                    // paused = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    Debug.Log("Paused the game.");
+                }
+                else
+                {
+                    menu.SetActive(true);
+                    settingsMenu.SetActive(false);
+                    player.SetActive(true);
+                    // paused = false;
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Debug.Log("Unpaused the game.");
+                }
             }
         }
     }

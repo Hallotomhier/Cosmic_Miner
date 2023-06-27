@@ -17,28 +17,28 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {   
-            if(menu.activeSelf) 
-            //  && settingsMenu.activeSelf
-            {
-                menu.SetActive(false);
-                settingsMenu.SetActive(true);
-                player.SetActive(false);
-                // paused = true;
-                Cursor.lockState = CursorLockMode.None;
-                Debug.Log("if");
-            }
-            else
-            {
-                menu.SetActive(true);
-                settingsMenu.SetActive(false);
-                player.SetActive(true);
-                // paused = false;
-                Cursor.lockState = CursorLockMode.Locked;
-                Debug.Log("else");
-            }
-        }
+        // if (Input.GetKeyDown(KeyCode.Escape))
+        // {   
+        //     if(menu.activeSelf) 
+        //     //  && settingsMenu.activeSelf
+        //     {
+        //         menu.SetActive(false);
+        //         settingsMenu.SetActive(true);
+        //         player.SetActive(false);
+        //         // paused = true;
+        //         Cursor.lockState = CursorLockMode.None;
+        //         Debug.Log("if");
+        //     }
+        //     else
+        //     {
+        //         menu.SetActive(true);
+        //         settingsMenu.SetActive(false);
+        //         player.SetActive(true);
+        //         // paused = false;
+        //         Cursor.lockState = CursorLockMode.Locked;
+        //         Debug.Log("else");
+        //     }
+        // }
         
     }
 }
