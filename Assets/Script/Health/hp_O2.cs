@@ -7,7 +7,7 @@ public class hp_O2 : MonoBehaviour
 {
     [Range(0,200)]public float oxygen = 50f;
     [Range(0,100)]public float health = 100f;
-    public float maxOxygen;
+    public float maxOxygen = 50f;
     public Slider oxygen_slider;
     public Slider health_slider;
     public Vector3 respawn_pos;
