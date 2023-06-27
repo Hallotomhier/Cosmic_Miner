@@ -76,6 +76,8 @@ public class O2building : MonoBehaviour
             build[0] = true;
             o2_button[0].SetActive(false);
             o2_button[1].SetActive(true);
+            upgrade[0] = true;
+
 
         }
 
@@ -88,6 +90,8 @@ public class O2building : MonoBehaviour
             o2_button[1].SetActive(false);
             o2_button[2].SetActive(true);
             is_build1 = false;
+            upgrade[0] = true;
+            upgrade[1] = true;
         }
 
         if (is_build3 == true)
@@ -99,6 +103,9 @@ public class O2building : MonoBehaviour
             o2_button[1].SetActive(false);
             o2_button[2].SetActive(false);
             is_build2 = false;
+            upgrade[0] = true;
+            upgrade[1] = true;
+            upgrade[2] = true;
         }
     }
 
