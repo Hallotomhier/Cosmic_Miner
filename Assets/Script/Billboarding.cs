@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpriteBillboarding : MonoBehaviour
+public class Billboarding : MonoBehaviour
 {
     public Vector3 cameraDirection;
     // Start is called before the first frame update
