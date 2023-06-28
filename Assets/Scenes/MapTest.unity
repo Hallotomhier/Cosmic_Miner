@@ -37748,7 +37748,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 283eec3c0c3b67041bbd7adaca51d459,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -45.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 283eec3c0c3b67041bbd7adaca51d459,
         type: 3}
@@ -37810,7 +37810,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7511558181221131132, guid: 283eec3c0c3b67041bbd7adaca51d459, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 283eec3c0c3b67041bbd7adaca51d459, type: 3}
 --- !u!1 &1765412044 stripped
 GameObject:
@@ -37834,8 +37835,8 @@ MonoBehaviour:
   inside_Air: 0
   oxygenbuild: {fileID: 1756618616}
   o2: {fileID: 657972905}
---- !u!64 &1765412046
-MeshCollider:
+--- !u!135 &1765412047
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -37844,10 +37845,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 289301614986012343, guid: 283eec3c0c3b67041bbd7adaca51d459, type: 3}
+  serializedVersion: 2
+  m_Radius: 68.590096
+  m_Center: {x: 0.992865, y: 32.608215, z: 1.803003}
 --- !u!1 &1780186318
 GameObject:
   m_ObjectHideFlags: 0
