@@ -1025,9 +1025,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 616235343}
         m_TargetAssemblyTypeName: DrillBuy, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: RefineOil
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11560,6 +11560,10 @@ MonoBehaviour:
   - {fileID: 92618130}
   player: {fileID: 189539532}
   interact: {fileID: 1062699106}
+  ores: {fileID: 657972904}
+  ironSellPrice: 0.2
+  goldSellPrice: 0.4
+  diamondSellPrice: 0.6
 --- !u!65 &616235344
 BoxCollider:
   m_ObjectHideFlags: 0

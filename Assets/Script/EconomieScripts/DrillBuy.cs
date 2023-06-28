@@ -17,6 +17,12 @@ public class DrillBuy : MonoBehaviour
     public Transform player;
     public GameObject interact;
 
+    public Money ores;
+    
+
+    public float ironSellPrice;
+    public float goldSellPrice;
+    public float diamondSellPrice;
 
     void Update()
     {  
@@ -98,5 +104,28 @@ public class DrillBuy : MonoBehaviour
             money.cash -= price[2];
             drill_script.diamond_drill += 1;
         }
+    }
+
+    public void RefineOil() 
+    {
+        if (ores.iron >= 100 && ores.gold >= 100 && ores.diamond >= 100)  
+        {
+            ores.oil += 1;
+            ores.iron -= 100;
+            ores.gold -= 100;
+            ores.diamond -= 100;
+        }
+    }
+
+    public void SellOres() 
+    {
+        ores.cash += ores.iron * ironSellPrice;
+        ores.iron = 0;
+
+        ores.cash += ores.gold * goldSellPrice;
+        ores.gold = 0;
+
+        ores.cash += ores.diamond * diamondSellPrice;
+        ores.diamond = 0;
     }
 }
