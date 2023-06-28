@@ -22,4 +22,5 @@ public class MainMenu : MonoBehaviour
             settingsMenu.SetActive(false);
         }
     }
+    
 }

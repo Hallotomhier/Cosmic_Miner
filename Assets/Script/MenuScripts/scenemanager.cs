@@ -10,6 +10,7 @@ public class scenemanager : MonoBehaviour
     public GameObject settingsMenu;
     public GameObject player;
     public GameObject saveLoad;
+    public Data save;
      
     
     void Start()
@@ -54,6 +55,17 @@ public class scenemanager : MonoBehaviour
     public void OnClick()
     {
         SceneManager.LoadScene(1);
+    }
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("Quit");
+    }
+    public void SaveAndQuit()
+    {
+        save.Save();
+        Application.Quit();
+        Debug.Log("SaveAndQuit");
     }
 
 }
