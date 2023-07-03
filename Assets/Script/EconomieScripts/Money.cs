@@ -22,6 +22,7 @@ public class Money : MonoBehaviour
         iron_text.text = iron.ToString("0");
         gold_text.text = gold.ToString("0");
         diamond_text.text = diamond.ToString("0");
+        oil_text.text = oil.ToString("0");
 
     }
 }
