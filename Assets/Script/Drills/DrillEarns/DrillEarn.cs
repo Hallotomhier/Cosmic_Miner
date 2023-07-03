@@ -16,6 +16,8 @@ public class DrillEarn : MonoBehaviour
 
     public bool upgrade;
 
+    // public GameObject gemSound;
+
     void Update()
     {
         upgrade = rm_stand.GetComponent<RmBuilding>().upgrade;
@@ -36,5 +38,7 @@ public class DrillEarn : MonoBehaviour
     {
         _money.iron += total_earn;
         total_earn = 0;
+        // gemSound.SetActive(false);
+        // gemSound.SetActive(true);
     }
 }
