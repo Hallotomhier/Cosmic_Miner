@@ -11,6 +11,10 @@ public class scenemanager : MonoBehaviour
     public GameObject player;
     public GameObject saveLoad;
     public Data save;
+    // public GameObject menuMusic;
+    // public GameObject gameMusic;
+    // public GameObject clickBackUI;
+    
      
     
     void Start()
@@ -25,7 +29,7 @@ public class scenemanager : MonoBehaviour
             {
                 deathScreen.SetActive(false);
                 Debug.Log("DeathScreen disabled.");
-                saveLoad.GetComponent<hp_O2>().enabled = true ; 
+                saveLoad.GetComponent<hp_O2>().enabled = true; 
             }
             else
             {
@@ -38,6 +42,10 @@ public class scenemanager : MonoBehaviour
                     // paused = true;
                     Cursor.lockState = CursorLockMode.None;
                     Debug.Log("Paused the game.");
+                    // menuMusic.SetActive(true);
+                    // gameMusic.SetActive(false);
+                    saveLoad.GetComponent<hp_O2>().enabled = true;
+                    
                 }
                 else
                 {
@@ -47,7 +55,11 @@ public class scenemanager : MonoBehaviour
                     // paused = false;
                     Cursor.lockState = CursorLockMode.Locked;
                     Debug.Log("Unpaused the game.");
-                    
+                    // menuMusic.SetActive(false);
+                    // gameMusic.SetActive(true);
+                    // clickBackUi.SetActivate(false);
+                    // clickBackUi.SetActivate(true);
+                    saveLoad.GetComponent<hp_O2>().enabled = false;
                 }
                 
             }
