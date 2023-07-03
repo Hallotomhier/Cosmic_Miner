@@ -28,13 +28,13 @@ public class OnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         mouse_over = true;
-        // if(eventData.pointerCurrentRaycast.gameObject)
-        // {
-        //     dataPointer = eventData.pointerCurrentRaycast.gameObject.name;
-        // }
+        if(eventData.pointerCurrentRaycast.gameObject.GetComponent<ScriptButton>())
+        {
+            dataPointer = eventData.pointerCurrentRaycast.gameObject.name;
+        }
         
 
-        // Debug.Log("Mouse enter");
+        Debug.Log("Mouse enter");
     }
 
     public void OnPointerExit(PointerEventData eventData)
