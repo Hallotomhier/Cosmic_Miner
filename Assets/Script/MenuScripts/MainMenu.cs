@@ -6,26 +6,52 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject settingsMenu;
-    public GameObject menu;
-    // public GameObject menuMusic;
-    // public GameObject clickBackUI;
+    // public GameObject menu;
+    public GameObject menuMusic;
+    public GameObject clickBackUI;
     
     // Start is called before the first frame update
     void Start()
     {
-        // menuMusic.SetActivate(true);
+        if(mainMenu.activeSelf)
+        {
+            menuMusic.SetActive(true);
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape) && menu.activeSelf)
-        {   
-            mainMenu.SetActive(true);
-            settingsMenu.SetActive(false);
-            // clickBackUi.SetActivate(false);
-            // clickBackUi.SetActivate(true);
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(mainMenu.activeSelf) 
+            //  && settingsMenu.activeSelf
+            {
+                // mainMenu.SetActive(false);
+                // settingsMenu.SetActive(true);
+                
+                // // paused = true;
+                    
+                // Debug.Log("Paused the game.");
+                // menuMusic.SetActive(true);
+                // gameMusic.SetActive(false);     
+            }
+            else
+            {   
+                clickBackUI.SetActive(false);
+                clickBackUI.SetActive(true); 
+                mainMenu.SetActive(true);
+                settingsMenu.SetActive(false);
+                    
+                // paused = false;
+                    
+                Debug.Log("Unpaused the game.");
+                // menuMusic.SetActive(false);
+                // gameMusic.SetActive(true);
+                 
+            }    
         }
     }
-    
+
 }
