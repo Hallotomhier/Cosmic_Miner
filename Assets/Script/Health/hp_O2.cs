@@ -17,6 +17,7 @@ public class hp_O2 : MonoBehaviour
     public Money money;
     public GameObject bloodUI;
     public GameObject deathScreen;
+    public GameObject save;
 
     public O2building oxygenbuild;
     
@@ -75,8 +76,8 @@ public class hp_O2 : MonoBehaviour
             health = 100;
             money.cash -= 200;
             deathScreen.SetActive(true);
-            gameObject.SetActive(false);
-            Debug.Log("You died!");
+            save.GetComponent<hp_O2>().enabled = false;
+           
             
         }
         if(health <= 30) 

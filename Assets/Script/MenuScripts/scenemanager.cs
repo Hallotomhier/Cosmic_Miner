@@ -25,7 +25,7 @@ public class scenemanager : MonoBehaviour
             {
                 deathScreen.SetActive(false);
                 Debug.Log("DeathScreen disabled.");
-                saveLoad.GetComponent<hp_O2>().enabled = false;
+                saveLoad.GetComponent<hp_O2>().enabled = true ; 
             }
             else
             {
@@ -47,7 +47,9 @@ public class scenemanager : MonoBehaviour
                     // paused = false;
                     Cursor.lockState = CursorLockMode.Locked;
                     Debug.Log("Unpaused the game.");
+                    
                 }
+                
             }
         }
     }

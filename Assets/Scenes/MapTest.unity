@@ -12259,7 +12259,7 @@ PrefabInstance:
     - target: {fileID: 921135363463048365, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 921135363552658732, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
@@ -13473,6 +13473,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 921135364455674063, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135364455674063, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135364455674063, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135364455674063, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135364455674063, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -13480,6 +13500,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135364455674063, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 921135364483557676, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
@@ -14195,6 +14220,7 @@ MonoBehaviour:
   money: {fileID: 657972904}
   bloodUI: {fileID: 1571015597}
   deathScreen: {fileID: 1303026780}
+  save: {fileID: 657972903}
   oxygenbuild: {fileID: 1756618616}
 --- !u!4 &657972906
 Transform:
