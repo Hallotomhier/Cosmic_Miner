@@ -2206,8 +2206,8 @@ RectTransform:
   m_Father: {fileID: 67464224}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.13568307}
-  m_AnchorMax: {x: 1, y: 0.864317}
+  m_AnchorMin: {x: 0, y: 0.35930744}
+  m_AnchorMax: {x: 1, y: 0.64069283}
   m_AnchoredPosition: {x: -1.1, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4241,6 +4241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 382957715}
   - component: {fileID: 382957716}
+  - component: {fileID: 382957717}
   m_Layer: 0
   m_Name: SoundsSlider
   m_TagString: Untagged
@@ -4268,8 +4269,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -45}
-  m_SizeDelta: {x: -80, y: -118}
+  m_AnchoredPosition: {x: 0, y: -61.4}
+  m_SizeDelta: {x: -80, y: 18.0926}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &382957716
 MonoBehaviour:
@@ -4321,7 +4322,32 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 382957717}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &382957717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382957714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f0f041881f5084d83d28da2a569c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundSlider: {fileID: 382957716}
 --- !u!1 &385912714
 GameObject:
   m_ObjectHideFlags: 0
@@ -12614,6 +12640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230687971}
   - component: {fileID: 1230687972}
+  - component: {fileID: 1230687973}
   m_Layer: 0
   m_Name: MusicSlider
   m_TagString: Untagged
@@ -12641,8 +12668,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -45}
-  m_SizeDelta: {x: -80, y: -118}
+  m_AnchoredPosition: {x: 0, y: -54.7}
+  m_SizeDelta: {x: -80, y: 24.7223}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1230687972
 MonoBehaviour:
@@ -12694,7 +12721,32 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1230687973}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1230687973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230687970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a516beb237fca4ca26313e7cd72e77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 1230687972}
 --- !u!1 &1233485430
 GameObject:
   m_ObjectHideFlags: 0
@@ -13172,8 +13224,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -19}
-  m_SizeDelta: {x: 0, y: -79.8}
+  m_AnchoredPosition: {x: 0, y: -25.7}
+  m_SizeDelta: {x: 0, y: -19.0323}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1244961279
 MonoBehaviour:
@@ -14266,8 +14318,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -19}
-  m_SizeDelta: {x: 0, y: -79.8}
+  m_AnchoredPosition: {x: 0, y: -15}
+  m_SizeDelta: {x: 0, y: -16.3363}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412996103
 MonoBehaviour:
@@ -17871,8 +17923,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 131773722}
   m_HandleRect: {fileID: 131773721}
   m_Direction: 2
-  m_Value: 0.5000002
-  m_Size: 0.72863394
+  m_Value: 0.50000006
+  m_Size: 0.28138536
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -19282,7 +19334,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.000015258789}
-  m_SizeDelta: {x: 0, y: 81.952545}
+  m_SizeDelta: {x: 0, y: 217.02162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2001851918
 MonoBehaviour:

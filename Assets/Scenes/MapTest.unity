@@ -14380,6 +14380,7 @@ MonoBehaviour:
   hpo2_script: {fileID: 657972905}
   money_script: {fileID: 657972904}
   drilltotal_script: {fileID: 657972907}
+  soundManager_script: {fileID: 0}
   money: 0
   health: 0
   oxygen: 0
@@ -15030,6 +15031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 747362890}
   - component: {fileID: 747362891}
+  - component: {fileID: 747362892}
   m_Layer: 0
   m_Name: MusicSlider
   m_TagString: Untagged
@@ -15110,7 +15112,32 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 747362892}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &747362892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747362889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a516beb237fca4ca26313e7cd72e77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 747362891}
 --- !u!1 &750903532
 GameObject:
   m_ObjectHideFlags: 0
@@ -34791,6 +34818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1456910907}
   - component: {fileID: 1456910908}
+  - component: {fileID: 1456910909}
   m_Layer: 0
   m_Name: SoundsSlider
   m_TagString: Untagged
@@ -34871,7 +34899,32 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456910909}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1456910909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456910906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f0f041881f5084d83d28da2a569c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundSlider: {fileID: 1456910908}
 --- !u!1 &1458378863
 GameObject:
   m_ObjectHideFlags: 0

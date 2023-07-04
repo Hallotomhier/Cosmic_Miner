@@ -44,6 +44,7 @@ public class Data : MonoBehaviour
     public hp_O2 hpo2_script;
     public Money money_script;
     public DrillTotal drilltotal_script;
+    public SoundManager soundManager_script;
 
     //Money health oxygen
     public float money;
