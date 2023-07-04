@@ -11,11 +11,11 @@ public class SoundManager : MonoBehaviour
     {
         if(PlayerPrefs.HasKey("soundVolume"))
         {
-            PlayerPrefs.SetFloat("soundVolume", 1);
             Load();
         }
         else
         {
+            PlayerPrefs.SetFloat("soundVolume", 1);
             Load();
         }
     }

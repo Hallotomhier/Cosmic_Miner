@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class MusicManager : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
+    public AudioSource menuMusic;
+    public AudioSource gameMusic;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,9 @@ public class MusicManager : MonoBehaviour
     }
     public void ChangeVolume()
     {
-        AudioListener.volume = volumeSlider.value;
+        // AudioListener.volume = volumeSlider.value;
+        menuMusic.volume = volumeSlider.value;
+        gameMusic.volume = volumeSlider.value;
     }
     public void Load()
     {   
