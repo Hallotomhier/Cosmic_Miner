@@ -13,9 +13,16 @@ public class conversationScript : MonoBehaviour
     public GameObject no;
     public GameObject reset;
     public GameObject next;
+    public bool isDone;
+    public GameObject empty;
+    public GameObject back;
     // Start is called before the first frame update
     void Start()
     {
+        if(isDone == true)
+        {
+            empty.SetActive(false);
+        }
         questionNumber = 0;
     }
 
@@ -23,23 +30,54 @@ public class conversationScript : MonoBehaviour
     void Update()
     {
         textOnScreen.text = convo.questions[questionNumber];
-        if(questionNumber >= 3)
+        if(questionNumber >= 4)
         {
-            no.SetActive(false);
-            yes.SetActive(false);
-            reset.SetActive(true);
+            // no.SetActive(false);
+            // yes.SetActive(false);
+            // reset.SetActive(true);
+            empty.SetActive(false);
+            isDone = true;
         }
+        if(questionNumber < 0)
+        {
+            questionNumber = 0;
+        }
+        if(questionNumber = 0)
+        {
+            back.SetActive(false);
+        }
+        else
+        {
+            back.SetActive(true);
+        }
+        // if (questionNumber = 3)
+        // {
+        //     next.SetActive(false);
+        // }
+        // else
+        // {
+        //     next.SetActive(true);
+        // }
     }
-    public void Yes()
+    // public void Yes()
+    // {
+    //     questionNumber += questionNumber +1;
+    // }
+    // public void No()
+    // {
+    //     questionNumber += questionNumber +2;
+    // }
+    // public void Reset()
+    // {
+    //     SceneManager.LoadScene(0);
+    // }
+    public void Next()
     {
-        questionNumber += questionNumber +1;
+        questionNumber += 1;
     }
-    public void No()
+    public void Back()
     {
-        questionNumber += questionNumber +2;
+        questionNumber -= 1;
     }
-    public void Reset()
-    {
-        SceneManager.LoadScene(0);
-    }
+
 }

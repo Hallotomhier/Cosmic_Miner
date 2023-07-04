@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f682e3a2ae563b64ebb3706a870a4b5b, type: 3}
   m_Name: Convo1
   m_EditorClassIdentifier: 
-  questions: []
+  questions:
+  - You have been stranded on a strange planet called Su Gnoma. Your goal here is
+    to survive get rich and finally get off the planet.
+  - You can get off this planet by building the rocket.
+  - However to build the rocket you will need money. You get this money by selling
+    the materials you get from drills.
+  - First go to the .. and build your first drill to get started.
