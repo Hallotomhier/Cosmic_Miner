@@ -9,6 +9,11 @@ public class Data : MonoBehaviour
     public Transform _player;
     public float[] _playerPos;
 
+    //Rocket Building
+    public bool rocket_1;
+    public bool rocket_2;
+    public bool rocket_3;
+
     //Rm building
     public bool rm_1;
     public bool rm_2;
@@ -45,6 +50,7 @@ public class Data : MonoBehaviour
     public Money money_script;
     public DrillTotal drilltotal_script;
     public SoundManager soundManager_script;
+    public RocketBuild rck_building;
 
     //Money health oxygen
     public float money;
@@ -111,6 +117,10 @@ public class Data : MonoBehaviour
         iron = money_script.iron;
         gold = money_script.gold;
         diamond = money_script.diamond;
+
+        rocket_1 = rck_building.is_build[0];
+        rocket_2 = rck_building.is_build[1];
+        rocket_3 = rck_building.is_build[2];
 
 
         rm_1 = rm_building.is_build1;
@@ -226,6 +236,10 @@ public class Data : MonoBehaviour
         money_script.iron = iron;
         money_script.gold = gold;
         money_script.diamond = diamond;
+
+        rck_building.is_build[0] = rocket_1;
+        rck_building.is_build[1] = rocket_2;
+        rck_building.is_build[2] = rocket_3;
 
         rm_building.is_build1 = rm_1;
         rm_building.is_build2 = rm_2;

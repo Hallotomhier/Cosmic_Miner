@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class RocketMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject rocket_panel;
+    public GameObject interact;
+    public Transform player;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void OnTriggerStay(Collider player)
     {
-        
+        interact.SetActive(true);
+        if (Input.GetKey(KeyCode.F))
+        {
+            rocket_panel.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else 
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            rocket_panel.SetActive(false);
+            
+        }
+    }
+
+    void OnTriggerExit(Collider player)
+    {
+        rocket_panel.SetActive(false);
+        interact.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

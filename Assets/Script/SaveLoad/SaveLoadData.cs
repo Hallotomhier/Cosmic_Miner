@@ -5,6 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class SaveLoadData 
 {
+    //Rocket Building
+    public bool rocket_1;
+    public bool rocket_2;
+    public bool rocket_3;
+
     //Rm building
     public bool rm_1;
     public bool rm_2;
@@ -66,6 +71,14 @@ public class SaveLoadData
 
     public SaveLoadData(Data data) 
     {
+        rocket_1 = data.rocket_1;
+        rocket_2 = data.rocket_2;
+        rocket_3 = data.rocket_3;
+
+
+
+
+
         iron_isActive0 = data.iron_isActive[0];
         iron_isActive1 = data.iron_isActive[1];
         iron_isActive2 = data.iron_isActive[2];

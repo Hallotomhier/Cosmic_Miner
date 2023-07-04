@@ -15,7 +15,6 @@ public class RocketBuild : MonoBehaviour
     public float oil;
     public float[] price;
 
-    public GameObject[] rck_building;
     public GameObject[] rck_button;
 
 
@@ -71,7 +70,6 @@ public class RocketBuild : MonoBehaviour
     {
         if (is_build[0] == true) 
         {
-            rck_building[0].SetActive(true);
             build[0] = true;
             rck_button[0].SetActive(false);
             rck_button[1].SetActive(true);
@@ -79,24 +77,22 @@ public class RocketBuild : MonoBehaviour
 
         if (is_build[1] == true)
         {
-            rck_building[1].SetActive(true);
-            rck_building[0].SetActive(false);
+           
             build[1] = true;
+            is_build[0] = false;
             rck_button[0].SetActive(false);
             rck_button[1].SetActive(false);
             rck_button[2].SetActive(true);
-            is_build[0] = false;
         }
 
         if (is_build[2] == true)
         {
-            rck_building[2].SetActive(true);
-            rck_building[1].SetActive(false);
             build[2] = true;
+            is_build[1] = false;
             rck_button[0].SetActive(false);
             rck_button[1].SetActive(false);
             rck_button[2].SetActive(false);
-            is_build[1] = false;
+
         }
     }
 

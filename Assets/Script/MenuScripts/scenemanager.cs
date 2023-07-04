@@ -44,7 +44,7 @@ public class scenemanager : MonoBehaviour
                     Debug.Log("Paused the game.");
                     // menuMusic.SetActive(true);
                     // gameMusic.SetActive(false);
-                    saveLoad.GetComponent<hp_O2>().enabled = true;
+                    saveLoad.GetComponent<hp_O2>().enabled = false;
                     
                 }
                 else
@@ -59,7 +59,7 @@ public class scenemanager : MonoBehaviour
                     // gameMusic.SetActive(true);
                     // clickBackUi.SetActivate(false);
                     // clickBackUi.SetActivate(true);
-                    saveLoad.GetComponent<hp_O2>().enabled = false;
+                    saveLoad.GetComponent<hp_O2>().enabled = true;
                 }
                 
             }

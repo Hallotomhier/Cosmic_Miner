@@ -8,7 +8,7 @@ public class Hpbuilding : MonoBehaviour
     public float money;
 
     public bool[] build;
-    public bool upgrade;
+    public bool[] upgrade;
 
     public GameObject[] hp_building;
     public GameObject[] hp_button;
@@ -77,6 +77,7 @@ public class Hpbuilding : MonoBehaviour
             build[0] = true;
             hp_button[0].SetActive(false);
             hp_button[1].SetActive(true);
+            upgrade[0] = true;
 
         }
 
@@ -89,6 +90,8 @@ public class Hpbuilding : MonoBehaviour
             hp_button[1].SetActive(false);
             hp_button[2].SetActive(true);
             is_build1 = false;
+            upgrade[0] = true;
+            upgrade[1] = true;
         }
 
         if (is_build3 == true)
@@ -100,6 +103,9 @@ public class Hpbuilding : MonoBehaviour
             hp_button[1].SetActive(false);
             hp_button[2].SetActive(false);
             is_build2 = false;
+            upgrade[0] = true;
+            upgrade[1] = true;
+            upgrade[2] = true;
 
         }
 
