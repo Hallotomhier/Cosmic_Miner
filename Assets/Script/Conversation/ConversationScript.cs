@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class conversationScript : MonoBehaviour
+public class ConversationScript : MonoBehaviour
 {
     public TMP_Text textOnScreen;
     public int questionNumber;
     public Convo1 convo;
-    public GameObject yes;
-    public GameObject no;
-    public GameObject reset;
+    // public GameObject yes;
+    // public GameObject no;
+    // public GameObject reset;
     public GameObject next;
     public bool isDone;
     public GameObject empty;
@@ -42,7 +42,7 @@ public class conversationScript : MonoBehaviour
         {
             questionNumber = 0;
         }
-        if(questionNumber = 0)
+        if(questionNumber == 0)
         {
             back.SetActive(false);
         }
