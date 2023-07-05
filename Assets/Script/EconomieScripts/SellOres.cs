@@ -13,14 +13,16 @@ public class SellOres : MonoBehaviour
     public float ironSellPrice;
     public float goldSellPrice;
     public float diamondSellPrice;
+
+    //music
+    public GameObject coinSound;
+    public GameObject clickBackUI;
+    public GameObject clickUI;
+
     void Start()
     {
         
     }
-
-
-
-
 
     public void Update()
     {
@@ -39,20 +41,63 @@ public class SellOres : MonoBehaviour
 
     public void SellIron()
     {
-        ores.cash += ores.iron * ironSellPrice;
-        ores.iron = 0;
+        if(ores.iron > 0)
+        {
+            ores.cash += ores.iron * ironSellPrice;
+            ores.iron = 0;
+
+            clickUI.SetActive(false);
+            clickUI.SetActive(true);
+            coinSound.SetActive(false);
+            coinSound.SetActive(true);
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
+        }
+        
+
     }
 
     public void SellGold() 
     {
-        ores.cash += ores.gold * goldSellPrice;
-        ores.gold = 0;
+        if(ores.gold > 0)
+        {
+            ores.cash += ores.gold * goldSellPrice;
+            ores.gold = 0;
+
+            clickUI.SetActive(false);
+            clickUI.SetActive(true);    
+            coinSound.SetActive(false);
+            coinSound.SetActive(true);
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
+        }
+        
     }
 
     public void SellDiamond() 
     {
-        ores.cash += ores.diamond * diamondSellPrice;
-        ores.diamond = 0;
+        if(ores.diamond > 0)
+        {
+            ores.cash += ores.diamond * diamondSellPrice;
+            ores.diamond = 0;
+
+            clickUI.SetActive(false);
+            clickUI.SetActive(true);
+            coinSound.SetActive(false);
+            coinSound.SetActive(true);
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
+        }
+        
     }
 
 

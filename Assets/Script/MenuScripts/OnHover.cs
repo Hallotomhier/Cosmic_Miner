@@ -8,20 +8,20 @@ public class OnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public bool mouse_over = false;
     public string dataPointer;
-    public GameObject buildingInfoObject;
+    // public GameObject buildingInfoObject;
     public TMP_Text buildingInfo;
 
     void Update()
     {
         if (mouse_over)
         {
-            buildingInfoObject.SetActive(true);
+            // buildingInfoObject.SetActive(true);
             buildingInfo.text = dataPointer;
             Debug.Log("Mouse Over");
         }
         else
         {
-            buildingInfoObject.SetActive(false);
+            // buildingInfoObject.SetActive(false);
         }
     }
 

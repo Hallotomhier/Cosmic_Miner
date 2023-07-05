@@ -16,15 +16,16 @@ public class DrillBuy : MonoBehaviour
     public GameObject[] buttons;
     public Transform player;
     
-
     public Money ores;
-    
-
-    
-
 
     public GameObject shoppanel;
     public GameObject buypanel;
+
+    //music
+    public GameObject buySound;
+    public GameObject gemSound;
+    public GameObject clickBackUI;
+    public GameObject clickUI;
 
     void Update()
     {  
@@ -67,6 +68,16 @@ public class DrillBuy : MonoBehaviour
         {
             money.cash -= price[0];
             drill_script.iron_drill += 1;
+            
+            clickUI.SetActive(false);
+            clickUI.SetActive(true);
+            buySound.SetActive(false);
+            buySound.SetActive(true);
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
         }
         
     }
@@ -77,6 +88,16 @@ public class DrillBuy : MonoBehaviour
         {
             money.cash -= price[1];
             drill_script.gold_drill += 1;
+
+            clickUI.SetActive(false);
+            clickUI.SetActive(true);
+            buySound.SetActive(false);
+            buySound.SetActive(true);
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
         }
     }
 
@@ -86,6 +107,16 @@ public class DrillBuy : MonoBehaviour
         {
             money.cash -= price[2];
             drill_script.diamond_drill += 1;
+
+            clickUI.SetActive(false);
+            clickUI.SetActive(true);
+            buySound.SetActive(false);
+            buySound.SetActive(true);
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
         }
     }
 
@@ -97,6 +128,18 @@ public class DrillBuy : MonoBehaviour
             ores.iron -= 100;
             ores.gold -= 100;
             ores.diamond -= 100;
+
+            clickUI.SetActive(false);
+            clickUI.SetActive(true);
+            buySound.SetActive(false);
+            buySound.SetActive(true);
+            gemSound.SetActive(false);
+            gemSound.SetActive(true);
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
         }
     }
 

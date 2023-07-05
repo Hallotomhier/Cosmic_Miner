@@ -13,16 +13,37 @@ public class ConversationScript : MonoBehaviour
     // public GameObject no;
     // public GameObject reset;
     public GameObject next;
-    public bool isDone;
+    public float isDone;
     public GameObject empty;
     public GameObject back;
+    public GameObject player;
+    public GameObject saveLoad;
+    public GameObject camera;
+    public GameObject done;
     // Start is called before the first frame update
     void Start()
     {
-        if(isDone == true)
+        if(PlayerPrefs.HasKey("isDone"))
         {
-            empty.SetActive(false);
+            Load();
+            if(isDone == 1)
+            {
+                empty.SetActive(false);
+            }
+            else
+            {
+                player.GetComponent<Move>().enabled = false;
+                saveLoad.SetActive(false);
+                camera.GetComponent<CamRot>().enabled = false;
+            }
         }
+        else
+        {
+            player.GetComponent<Move>().enabled = false;
+            saveLoad.SetActive(false);
+            camera.GetComponent<CamRot>().enabled = false;
+        }
+        
         questionNumber = 0;
     }
 
@@ -30,13 +51,19 @@ public class ConversationScript : MonoBehaviour
     void Update()
     {
         textOnScreen.text = convo.questions[questionNumber];
-        if(questionNumber >= 4)
+        if(questionNumber == 3)
         {
             // no.SetActive(false);
             // yes.SetActive(false);
             // reset.SetActive(true);
-            empty.SetActive(false);
-            isDone = true;
+            next.SetActive(false);
+            done.SetActive(true);
+            
+        }
+        else
+        {
+            next.SetActive(true);
+            done.SetActive(false);
         }
         if(questionNumber < 0)
         {
@@ -79,5 +106,18 @@ public class ConversationScript : MonoBehaviour
     {
         questionNumber -= 1;
     }
+    public void Done()
+    {
+        empty.SetActive(false);
+        isDone = 1;
 
+        player.GetComponent<Move>().enabled = true;
+        saveLoad.SetActive(true);
+        camera.GetComponent<CamRot>().enabled = true;
+        PlayerPrefs.SetFloat("isDone", isDone);
+    }
+    public void Load()
+    {
+        isDone = PlayerPrefs.GetFloat("isDone");
+    }
 }

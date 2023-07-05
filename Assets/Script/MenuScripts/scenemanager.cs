@@ -11,61 +11,69 @@ public class scenemanager : MonoBehaviour
     public GameObject player;
     public GameObject saveLoad;
     public Data save;
-    // public GameObject menuMusic;
-    // public GameObject gameMusic;
-    // public GameObject clickBackUI;
+    public GameObject menuMusic;
+    public GameObject gameMusic;
+    public GameObject clickBackUI;
+    public GameObject tutorial;
     
      
     
     void Start()
     {
-        
+        if(tutorial.activeSelf)
+        {
+            // Cursor.lockState = CursorLockMode.None;
+            Debug.Log("tutiral oN");
+        }
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if(deathScreen.activeSelf)
+        if (tutorial.activeSelf) 
             {
-                deathScreen.SetActive(false);
-                Debug.Log("DeathScreen disabled.");
-                saveLoad.GetComponent<hp_O2>().enabled = true; 
+                Cursor.lockState = CursorLockMode.None;
             }
-            else
-            {
-                if(menu.activeSelf) 
-            //  && settingsMenu.activeSelf
+            
+        else if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            
+                if(deathScreen.activeSelf)
                 {
-                    menu.SetActive(false);
-                    settingsMenu.SetActive(true);
-                    player.SetActive(false);
-                    // paused = true;
-                    Cursor.lockState = CursorLockMode.None;
-                    Debug.Log("Paused the game.");
-                    // menuMusic.SetActive(true);
-                    // gameMusic.SetActive(false);
-                    saveLoad.GetComponent<hp_O2>().enabled = false;
-                    
+                    deathScreen.SetActive(false);
+                    Debug.Log("DeathScreen disabled.");
+                    saveLoad.GetComponent<hp_O2>().enabled = true; 
                 }
                 else
                 {
-                    menu.SetActive(true);
-                    settingsMenu.SetActive(false);
-                    player.SetActive(true);
-                    // paused = false;
-                    Cursor.lockState = CursorLockMode.Locked;
-                    Debug.Log("Unpaused the game.");
-                    // menuMusic.SetActive(false);
-                    // gameMusic.SetActive(true);
-                    // clickBackUi.SetActivate(false);
-                    // clickBackUi.SetActivate(true);
-                    saveLoad.GetComponent<hp_O2>().enabled = true;
+                    if(menu.activeSelf)
+                    {
+                        menu.SetActive(false);
+                        settingsMenu.SetActive(true);
+                        player.SetActive(false);
+                        // paused = true;
+                        Cursor.lockState = CursorLockMode.None;
+                        Debug.Log("Paused the game.");
+                        menuMusic.SetActive(true);
+                        gameMusic.SetActive(false);
+                        saveLoad.GetComponent<hp_O2>().enabled = false;
+                    }
+                    else
+                    {
+                        menu.SetActive(true);
+                        settingsMenu.SetActive(false);
+                        player.SetActive(true);
+                        // paused = false;
+                        Cursor.lockState = CursorLockMode.Locked;
+                        Debug.Log("Unpaused the game.");
+                        menuMusic.SetActive(false);
+                        gameMusic.SetActive(true);
+                        clickBackUI.SetActive(false);
+                        clickBackUI.SetActive(true);
+                        saveLoad.GetComponent<hp_O2>().enabled = true;
+                    }
                 }
-                
-            }
+            
         }
     }
-    
     public void OnClick()
     {
         SceneManager.LoadScene(1);
@@ -81,5 +89,4 @@ public class scenemanager : MonoBehaviour
         Application.Quit();
         Debug.Log("SaveAndQuit");
     }
-
 }

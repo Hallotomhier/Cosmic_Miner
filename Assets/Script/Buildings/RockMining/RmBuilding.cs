@@ -21,6 +21,11 @@ public class RmBuilding : MonoBehaviour
     public bool is_build2;
     public bool is_build3;
 
+    //music
+    public GameObject buySound;
+    public GameObject clickBackUI;
+    public GameObject clickUI;
+
 
     public void Update()
     {
@@ -34,12 +39,19 @@ public class RmBuilding : MonoBehaviour
         {
             if (build[0] == false)
             {
-                
                 money_script.cash -= price[0];
                 is_build1 = true;
                 
-                
+                clickUI.SetActive(false);
+                clickUI.SetActive(true);
+                buySound.SetActive(false);
+                buySound.SetActive(true);
             }
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
         }
     }
 
@@ -49,11 +61,19 @@ public class RmBuilding : MonoBehaviour
         {
             if (build[0] == true && build[1] == false)
             {
-                
                 money_script.cash -= price[1];
                 is_build2 = true;
                 
+                clickUI.SetActive(false);
+                clickUI.SetActive(true);
+                buySound.SetActive(false);
+                buySound.SetActive(true);
             }
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
         }
     }
 
@@ -63,10 +83,19 @@ public class RmBuilding : MonoBehaviour
         {
             if (build[0] == true && build[1] == true && build[2] == false)
             {
-                
                 money_script.cash -= price[2];
                 is_build3 = true;
+
+                clickUI.SetActive(false);
+                clickUI.SetActive(true);
+                buySound.SetActive(false);
+                buySound.SetActive(true);
             }
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
         }
     }
 

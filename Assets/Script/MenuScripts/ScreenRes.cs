@@ -15,7 +15,11 @@ public class ScreenRes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Screen.SetResolution(1920, 1080, FullScreenMode.Windowed);
+        // Screen.SetResolution(1920, 1080, FullScreenMode.Windowed);
+
+
+
+
         // Screen.fullScreen = false;
         fsOn.GetComponent<Toggle>().isOn = true;
         // dropDown = GetComponent<Dropdown>();

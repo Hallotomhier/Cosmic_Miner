@@ -17,6 +17,13 @@ public class RocketBuild : MonoBehaviour
 
     public GameObject[] rck_button;
 
+    //music
+    public GameObject buySound;
+    public GameObject clickBackUI;
+    public GameObject clickUI;
+
+    public GameObject winScreen;
+
 
     void Start()
     {
@@ -38,7 +45,17 @@ public class RocketBuild : MonoBehaviour
             {
                 money_script.oil -= price[0];
                 is_build[0] = true;
+
+                clickUI.SetActive(false);
+                clickUI.SetActive(true);
+                buySound.SetActive(false);
+                buySound.SetActive(true);
             }
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
         }
     }
 
@@ -50,7 +67,17 @@ public class RocketBuild : MonoBehaviour
             {
                 money_script.oil -= price[1];
                 is_build[1] = true;
+
+                clickUI.SetActive(false);
+                clickUI.SetActive(true);
+                buySound.SetActive(false);
+                buySound.SetActive(true);
             }
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
         }
     }
 
@@ -62,7 +89,17 @@ public class RocketBuild : MonoBehaviour
             {
                 money_script.oil -= price[2];
                 is_build[2] = true;
+
+                clickUI.SetActive(false);
+                clickUI.SetActive(true);
+                buySound.SetActive(false);
+                buySound.SetActive(true);
             }
+        }
+        else
+        {
+            clickBackUI.SetActive(false);
+            clickBackUI.SetActive(true);
         }
     }
 
