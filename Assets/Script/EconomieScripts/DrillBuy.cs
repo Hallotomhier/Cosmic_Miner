@@ -7,7 +7,7 @@ using TMPro;
 public class DrillBuy : MonoBehaviour
 {
     public GameObject oil_stand;
-    public GameObject panel;
+    
     public RaycastHit hit;
     public Money money;
     public DrillTotal drill_script;
@@ -15,43 +15,26 @@ public class DrillBuy : MonoBehaviour
     public bool[] upgrade;
     public GameObject[] buttons;
     public Transform player;
-    public GameObject interact;
+    
 
     public Money ores;
     
 
-    public float ironSellPrice;
-    public float goldSellPrice;
-    public float diamondSellPrice;
+    
+
+
+    public GameObject shoppanel;
+    public GameObject buypanel;
 
     void Update()
     {  
         UpgradeCheck();
+       
         
     }
 
-    public void OnTriggerStay(Collider player)
-    {
-        interact.SetActive(true);
-        if (Input.GetKey(KeyCode.F))
-        {
-            panel.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-        }
-
-        if (!Input.GetKey(KeyCode.F))
-        {
-            panel.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-
-    }
-
-    public void OnTriggerExit(Collider player)
-    {
-        panel.SetActive(false);
-        interact.SetActive(false);
-    }
+    
+    
 
     public void UpgradeCheck() 
     {
@@ -117,15 +100,5 @@ public class DrillBuy : MonoBehaviour
         }
     }
 
-    public void SellOres() 
-    {
-        ores.cash += ores.iron * ironSellPrice;
-        ores.iron = 0;
-
-        ores.cash += ores.gold * goldSellPrice;
-        ores.gold = 0;
-
-        ores.cash += ores.diamond * diamondSellPrice;
-        ores.diamond = 0;
-    }
+    
 }
