@@ -6,6 +6,7 @@ using System.IO;
 
 public class SaveLoad : MonoBehaviour
 {
+    // public Data dataScript;
     public static void SaveData(Data data) 
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -33,8 +34,10 @@ public class SaveLoad : MonoBehaviour
         {
             Debug.LogError("SaveData niet gevonden in " + path);
             return null;
+            // Data dataScript = new Data();
+            // dataScript.Save();
+            // Debug.Log("Save();");
+            // LoadData();
         }
-
-
     }
 }

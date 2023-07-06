@@ -77,6 +77,16 @@ public class Data : MonoBehaviour
     //Auto save
     public float timer = 10f;
     
+    // void Awake()
+    // {
+    //     string path = Application.persistentDataPath + "/save.powerpoint";
+    //     if (!File.Exists(path))
+    //     {
+    //         SaveLoad.SaveData();
+    //     }
+    // }
+    
+    
     void Update()
     {
         //player pos
@@ -156,10 +166,6 @@ public class Data : MonoBehaviour
         diamond_isActive[0] = drill_script.diamond_isActive[0];
         diamond_isActive[1] = drill_script.diamond_isActive[1];
         diamond_isActive[2] = drill_script.diamond_isActive[2];
-        
-
-
-
 
         SaveLoad.SaveData(this);
     }
@@ -167,6 +173,7 @@ public class Data : MonoBehaviour
     public void Start()
     {
         SaveLoadData data = SaveLoad.LoadData();
+        
         _playerPos[0] = data._pos1;
         _playerPos[1] = data._pos2;
         _playerPos[2] = data._pos3;
@@ -274,8 +281,6 @@ public class Data : MonoBehaviour
         drill_script.diamond_isActive[0] = diamond_isActive[0];
         drill_script.diamond_isActive[1] = diamond_isActive[1];
         drill_script.diamond_isActive[2] = diamond_isActive[2];
-        
-
     }
 
 }
