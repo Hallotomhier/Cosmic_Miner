@@ -23,6 +23,9 @@ public class RocketBuild : MonoBehaviour
     public GameObject clickUI;
 
     public GameObject winScreen;
+    public GameObject screenUI;
+    public GameObject player;
+    public GameObject camera;
 
 
     void Start()
@@ -94,6 +97,11 @@ public class RocketBuild : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                
+                winScreen.SetActive(true);
+                screenUI.SetActive(false);
+                player.GetComponent<Move>().enabled = false;
+                camera.GetComponent<CamRot>().enabled = false;
             }
         }
         else
