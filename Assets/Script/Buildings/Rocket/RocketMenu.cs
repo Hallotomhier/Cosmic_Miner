@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class RocketMenu : MonoBehaviour
 {
     public GameObject rocket_panel;
     public GameObject interact;
     public Transform player;
+
+    public TMP_Text buildingInfo;
+
     void Start()
     {
         
@@ -25,7 +29,7 @@ public class RocketMenu : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             rocket_panel.SetActive(false);
-            
+            buildingInfo.text = "";
         }
     }
 
@@ -34,5 +38,6 @@ public class RocketMenu : MonoBehaviour
         rocket_panel.SetActive(false);
         interact.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        buildingInfo.text = "";
     }
 }

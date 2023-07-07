@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ArmMenu : MonoBehaviour
 {
     public GameObject interact;
     public GameObject arm_panel;
     public Transform player;
+
+    public TMP_Text buildingInfo;
     void Update()
     {
         
@@ -26,6 +29,7 @@ public class ArmMenu : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             arm_panel.SetActive(false);
+            buildingInfo.text = "";
         }
     }
 
@@ -33,6 +37,7 @@ public class ArmMenu : MonoBehaviour
     {
         arm_panel.SetActive(false);
         interact.SetActive(false);
+        buildingInfo.text = "";
     }
 
 

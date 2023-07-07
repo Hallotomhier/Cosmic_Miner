@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HpMenu : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class HpMenu : MonoBehaviour
     public GameObject sell_panel;
     public GameObject buy_panel;
     public Transform player;
+
+    public TMP_Text buildingInfo;
+
+
     void Update()
     {
         
@@ -32,6 +37,7 @@ public class HpMenu : MonoBehaviour
             hp_panel.SetActive(false);
             sell_panel.SetActive(false);
             buy_panel.SetActive(false);
+            buildingInfo.text = "";
         }
     }
 
@@ -41,5 +47,6 @@ public class HpMenu : MonoBehaviour
         hp_panel.SetActive(false);
         sell_panel.SetActive(false);
         buy_panel.SetActive(false);
+        buildingInfo.text = "";
     }
 }

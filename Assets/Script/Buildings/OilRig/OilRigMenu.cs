@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class OilRigMenu : MonoBehaviour
 {
     public GameObject interact;
     public GameObject oil_rig_panel;
     public Transform player;
+
+    public TMP_Text buildingInfo;
+
     void Update()
     {
         
@@ -28,6 +32,7 @@ public class OilRigMenu : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             oil_rig_panel.SetActive(false);
+            buildingInfo.text = "";
         }
 
     }
@@ -36,5 +41,6 @@ public class OilRigMenu : MonoBehaviour
     {
         interact.SetActive(false);
         oil_rig_panel.SetActive(false); 
+        buildingInfo.text = "";
     }
 }

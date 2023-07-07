@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RmMenu : MonoBehaviour
 {
     public GameObject interact;
     public GameObject rm_panel;
     public Transform player;
+
+    public TMP_Text buildingInfo;
+
     void Update()
     {
        
@@ -26,6 +30,7 @@ public class RmMenu : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             rm_panel.SetActive(false);
+            buildingInfo.text = "";
         }
     }
 
@@ -33,5 +38,6 @@ public class RmMenu : MonoBehaviour
     {
         interact.SetActive(false);
         rm_panel.SetActive(false);
+        buildingInfo.text = "";
     }
 }
