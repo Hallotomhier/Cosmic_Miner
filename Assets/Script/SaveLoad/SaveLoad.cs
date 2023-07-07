@@ -6,8 +6,23 @@ using System.IO;
 
 public class SaveLoad : MonoBehaviour
 {
+    public O2building o2;
+    public Hpbuilding shop;
+
     // public Data dataScript;
-    public static void SaveData(Data data) 
+    void Start()
+    {
+        
+        string path = Application.persistentDataPath + "/save.powerpoint";
+        if(!File.Exists(path))
+        {
+            
+            o2.is_build1 = true;
+            shop.is_build1 = true;
+        }
+
+    }
+    public void SaveData(Data data) 
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/save.powerpoint";
@@ -34,10 +49,11 @@ public class SaveLoad : MonoBehaviour
         {
             Debug.LogError("SaveData niet gevonden in " + path);
             return null;
-            // Data dataScript = new Data();
-            // dataScript.Save();
-            // Debug.Log("Save();");
-            // LoadData();
+            
         }
+   
     }
+
+
+    
 }

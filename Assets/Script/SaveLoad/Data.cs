@@ -51,6 +51,7 @@ public class Data : MonoBehaviour
     public DrillTotal drilltotal_script;
     public SoundManager soundManager_script;
     public RocketBuild rck_building;
+    public SaveLoad slData;
 
     //Money health oxygen
     public float money;
@@ -167,7 +168,7 @@ public class Data : MonoBehaviour
         diamond_isActive[1] = drill_script.diamond_isActive[1];
         diamond_isActive[2] = drill_script.diamond_isActive[2];
 
-        SaveLoad.SaveData(this);
+        slData.SaveData(this);
     }
 
     public void Start()

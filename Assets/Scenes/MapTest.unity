@@ -20222,6 +20222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b657314a5bf887a40b60dd0bb2489926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  o2: {fileID: 1756618616}
+  shop: {fileID: 77454687}
 --- !u!114 &657972909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20254,7 +20256,7 @@ MonoBehaviour:
   oil_1: 0
   oil_2: 0
   oil_3: 0
-  hp_1: 1
+  hp_1: 0
   hp_2: 0
   hp_3: 0
   drill_script: {fileID: 2062095115}
@@ -20268,6 +20270,7 @@ MonoBehaviour:
   drilltotal_script: {fileID: 657972907}
   soundManager_script: {fileID: 0}
   rck_building: {fileID: 661923983}
+  slData: {fileID: 657972908}
   money: 0
   health: 0
   oxygen: 0
@@ -32407,7 +32410,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.75
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -46793,7 +46796,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.75
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
