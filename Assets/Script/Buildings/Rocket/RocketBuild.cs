@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class RocketBuild : MonoBehaviour
 {
     public OilRigBuilding orb;
@@ -27,6 +28,9 @@ public class RocketBuild : MonoBehaviour
     public GameObject player;
     public GameObject camera;
     public GameObject menu;
+
+    //Text
+    public TMP_Text buildingInfo;
 
 
     public void Quit()
@@ -55,6 +59,7 @@ public class RocketBuild : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                buildingInfo.text = "";
             }
         }
         else
@@ -77,6 +82,7 @@ public class RocketBuild : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                buildingInfo.text = "";
             }
         }
         else
@@ -99,6 +105,8 @@ public class RocketBuild : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+
+                buildingInfo.text = "";
                 
                 winScreen.SetActive(true);
                 screenUI.SetActive(false);

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class RmBuilding : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class RmBuilding : MonoBehaviour
     public GameObject clickBackUI;
     public GameObject clickUI;
 
+    //Text
+    public TMP_Text buildingInfo;
+
 
     public void Update()
     {
@@ -46,6 +50,7 @@ public class RmBuilding : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                buildingInfo.text = "";
             }
         }
         else
@@ -68,6 +73,7 @@ public class RmBuilding : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                buildingInfo.text = "";
             }
         }
         else
@@ -90,6 +96,7 @@ public class RmBuilding : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                buildingInfo.text = "";
             }
         }
         else

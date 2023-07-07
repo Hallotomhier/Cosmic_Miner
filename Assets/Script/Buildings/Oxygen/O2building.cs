@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class O2building : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class O2building : MonoBehaviour
     public GameObject clickBackUI;
     public GameObject clickUI;
 
+    //Text
+    public TMP_Text buildingInfo;
+
 
     void Update()
     {
@@ -44,6 +48,7 @@ public class O2building : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                buildingInfo.text = "";
 
             }
         }
@@ -66,7 +71,8 @@ public class O2building : MonoBehaviour
                 clickUI.SetActive(false);
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
-                buySound.SetActive(true);         
+                buySound.SetActive(true); 
+                buildingInfo.text = "";        
             }
         }
         else
@@ -89,6 +95,7 @@ public class O2building : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                buildingInfo.text = "";
             }
         }
         else

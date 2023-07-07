@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class OilRigBuilding : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class OilRigBuilding : MonoBehaviour
     public GameObject buySound;
     public GameObject clickBackUI;
     public GameObject clickUI;
+
+    //Text
+    public TMP_Text buildingInfo;
     
     //UPDATE
     void Update()
@@ -47,6 +51,7 @@ public class OilRigBuilding : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                buildingInfo.text = "";
             }
         }
         else
@@ -70,6 +75,7 @@ public class OilRigBuilding : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                buildingInfo.text = "";
             }
         }
         else
@@ -94,6 +100,7 @@ public class OilRigBuilding : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                buildingInfo.text = "";
             }
         }
         else

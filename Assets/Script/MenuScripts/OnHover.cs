@@ -10,6 +10,7 @@ public class OnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public string dataPointer;
     // public GameObject buildingInfoObject;
     public TMP_Text buildingInfo;
+    // public GameObject buildingInfoObject;
 
     void Update()
     {
@@ -33,6 +34,7 @@ public class OnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             dataPointer = eventData.pointerCurrentRaycast.gameObject.name;
         }
         
+        dataPointer = eventData.pointerCurrentRaycast.gameObject.name;
 
         Debug.Log("Mouse enter");
     }
@@ -40,6 +42,8 @@ public class OnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerExit(PointerEventData eventData)
     {
         mouse_over = false;
+        buildingInfo.text = "";    
         Debug.Log("Mouse exit");
+        // buildingInfoObject.SetActive(false);
     }
 }

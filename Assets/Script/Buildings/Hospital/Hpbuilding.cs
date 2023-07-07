@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Hpbuilding : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class Hpbuilding : MonoBehaviour
     public GameObject clickBackUI;
     public GameObject clickUI;
 
+    //Text
+    public TMP_Text buildingInfo;
+
 
     void Update()
     {
@@ -44,6 +48,7 @@ public class Hpbuilding : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                buildingInfo.text = "";
             }
         }
         else
@@ -66,6 +71,7 @@ public class Hpbuilding : MonoBehaviour
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
                 buySound.SetActive(true);
+                buildingInfo.text = "";
             }
         }
         else
@@ -87,7 +93,8 @@ public class Hpbuilding : MonoBehaviour
                 clickUI.SetActive(false);
                 clickUI.SetActive(true);
                 buySound.SetActive(false);
-                buySound.SetActive(true);               
+                buySound.SetActive(true); 
+                buildingInfo.text = "";              
             }
         }
         else
