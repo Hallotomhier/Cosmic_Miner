@@ -74,6 +74,7 @@ public class Data : MonoBehaviour
     public bool[] diamond_isActive;
     public bool[] oil_isActive;
 
+    public bool is_done;
 
     //Auto save
     public float timer = 10f;
@@ -116,6 +117,8 @@ public class Data : MonoBehaviour
 
     public void Save()
     {
+
+        
         iron_drill = drilltotal_script.iron_drill;
         gold_drill = drilltotal_script.gold_drill;
         diamond_drill = drilltotal_script.diamond_drill;
