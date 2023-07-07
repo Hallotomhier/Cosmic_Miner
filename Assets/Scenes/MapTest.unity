@@ -2748,7 +2748,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189539530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -337.3, y: 6.5, z: -219.8}
+  m_LocalPosition: {x: 259.13, y: 2.6, z: 227.9}
   m_LocalScale: {x: 1, y: 1.1149, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5714,6 +5714,21 @@ PrefabInstance:
         type: 3}
       propertyPath: upgrade.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864812805660518160, guid: 35c71f058c3e7684b9be4fbd13dfbef8,
+        type: 3}
+      propertyPath: price.Array.data[0]
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864812805660518160, guid: 35c71f058c3e7684b9be4fbd13dfbef8,
+        type: 3}
+      propertyPath: price.Array.data[1]
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864812805660518160, guid: 35c71f058c3e7684b9be4fbd13dfbef8,
+        type: 3}
+      propertyPath: price.Array.data[2]
+      value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 8864812805660518160, guid: 35c71f058c3e7684b9be4fbd13dfbef8,
         type: 3}
@@ -14244,6 +14259,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 921135363524738690, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: Phase3 $3500
+      objectReference: {fileID: 0}
     - target: {fileID: 921135363552658732, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -14596,6 +14616,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 921135363803545769, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Phase1 $1000
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 921135363812191834, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -14746,6 +14773,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135363823893047, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: Phase2 $1000
       objectReference: {fileID: 0}
     - target: {fileID: 921135363826224868, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
@@ -15200,6 +15232,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 921135363915199889, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: Phase3 $2500
+      objectReference: {fileID: 0}
     - target: {fileID: 921135363916971590, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
       propertyPath: m_Type
@@ -15355,6 +15392,20 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135363977867527, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Phase1 $1000
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135363983442375, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Phase1 $50
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 921135364027185798, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
@@ -15780,6 +15831,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 921135364192298778, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Phase1 $100
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 921135364212439118, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
       propertyPath: m_IsActive
@@ -16083,6 +16141,21 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 921135364321353733, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: Phase2 $3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135364350058762, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: Phase2 $2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135364360386642, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: Phase3 $5000
+      objectReference: {fileID: 0}
     - target: {fileID: 921135364389386925, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -16112,6 +16185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135364444314200, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: Phase3 $3500
       objectReference: {fileID: 0}
     - target: {fileID: 921135364455674060, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
@@ -16673,6 +16751,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -83
       objectReference: {fileID: 0}
+    - target: {fileID: 921135364847059245, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: Phase3 $5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135365000561426, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: Phase2 $3500
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135365012705305, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: Phase2 $2500
+      objectReference: {fileID: 0}
     - target: {fileID: 921135365025214976, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
       propertyPath: m_Name
@@ -17014,6 +17107,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 921135365319795086, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Phase1 $1000
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1934875768700874860, guid: fbf7388815b35504f8cdcfd2bd7f6fa7,
         type: 3}
@@ -17683,6 +17783,21 @@ PrefabInstance:
         type: 3}
       propertyPath: upgrade.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468503615123994583, guid: 2ffb2dc4a0f2b7c4c92a3fe2083fecf0,
+        type: 3}
+      propertyPath: price.Array.data[0]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468503615123994583, guid: 2ffb2dc4a0f2b7c4c92a3fe2083fecf0,
+        type: 3}
+      propertyPath: price.Array.data[1]
+      value: 3500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468503615123994583, guid: 2ffb2dc4a0f2b7c4c92a3fe2083fecf0,
+        type: 3}
+      propertyPath: price.Array.data[2]
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 7468503615123994583, guid: 2ffb2dc4a0f2b7c4c92a3fe2083fecf0,
         type: 3}
@@ -34861,6 +34976,21 @@ PrefabInstance:
       objectReference: {fileID: 657972904}
     - target: {fileID: 2898084336381774159, guid: 58d102710584f274ca6fa9fee3204d8e,
         type: 3}
+      propertyPath: price.Array.data[0]
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898084336381774159, guid: 58d102710584f274ca6fa9fee3204d8e,
+        type: 3}
+      propertyPath: price.Array.data[1]
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898084336381774159, guid: 58d102710584f274ca6fa9fee3204d8e,
+        type: 3}
+      propertyPath: price.Array.data[2]
+      value: 3500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898084336381774159, guid: 58d102710584f274ca6fa9fee3204d8e,
+        type: 3}
       propertyPath: rm_button.Array.data[0]
       value: 
       objectReference: {fileID: 701110712}
@@ -36180,6 +36310,21 @@ PrefabInstance:
         type: 3}
       propertyPath: upgrade.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850536383888478411, guid: 97afbf807808bbb4cb5200b9c3909614,
+        type: 3}
+      propertyPath: price.Array.data[0]
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850536383888478411, guid: 97afbf807808bbb4cb5200b9c3909614,
+        type: 3}
+      propertyPath: price.Array.data[1]
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850536383888478411, guid: 97afbf807808bbb4cb5200b9c3909614,
+        type: 3}
+      propertyPath: price.Array.data[2]
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 4850536383888478411, guid: 97afbf807808bbb4cb5200b9c3909614,
         type: 3}
@@ -38603,9 +38748,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price:
-  - 100
-  - 200
-  - 300
+  - 1000
+  - 2500
+  - 3500
   money: 0
   build: 000000
   upgrade: 000000
