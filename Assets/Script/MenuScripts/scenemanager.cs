@@ -15,6 +15,7 @@ public class scenemanager : MonoBehaviour
     public GameObject gameMusic;
     public GameObject clickBackUI;
     public GameObject tutorial;
+    // public GameObject winScreen;
     
      
     

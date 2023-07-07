@@ -500,8 +500,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2145541648}
-        m_TargetAssemblyTypeName: scenemanager, Assembly-CSharp
+      - m_Target: {fileID: 661923983}
+        m_TargetAssemblyTypeName: RocketBuild, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -4463,8 +4463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -435, y: -250.5}
-  m_SizeDelta: {x: -970, y: -571}
+  m_AnchoredPosition: {x: -210.5, y: -135.5}
+  m_SizeDelta: {x: -481, y: -341}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266109256
 MonoBehaviour:
@@ -17521,6 +17521,7 @@ MonoBehaviour:
   screenUI: {fileID: 697245912}
   player: {fileID: 189539530}
   camera: {fileID: 2062095109}
+  menu: {fileID: 2145541645}
 --- !u!64 &661923984
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25804,8 +25805,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 435, y: -250.5}
-  m_SizeDelta: {x: -970, y: -571}
+  m_AnchoredPosition: {x: 210.5, y: -135.5}
+  m_SizeDelta: {x: -481, y: -341}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &926815832
 MonoBehaviour:
@@ -42144,8 +42145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -250.5}
-  m_SizeDelta: {x: -970, y: -571}
+  m_AnchoredPosition: {x: 0, y: -135.5}
+  m_SizeDelta: {x: -482, y: -341}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1645928685
 MonoBehaviour:

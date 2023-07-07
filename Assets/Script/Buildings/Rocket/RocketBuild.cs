@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class RocketBuild : MonoBehaviour
 {
     public OilRigBuilding orb;
@@ -26,11 +26,13 @@ public class RocketBuild : MonoBehaviour
     public GameObject screenUI;
     public GameObject player;
     public GameObject camera;
+    public GameObject menu;
 
 
-    void Start()
+    public void Quit()
     {
-
+        Application.Quit();
+        Debug.Log("Quit");
     }
 
 
@@ -102,6 +104,7 @@ public class RocketBuild : MonoBehaviour
                 screenUI.SetActive(false);
                 player.GetComponent<Move>().enabled = false;
                 camera.GetComponent<CamRot>().enabled = false;
+                menu.SetActive(false);
             }
         }
         else
@@ -140,5 +143,6 @@ public class RocketBuild : MonoBehaviour
 
         }
     }
+   
 
 }
